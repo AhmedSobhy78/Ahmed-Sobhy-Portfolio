@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RC Boat Project - Ahmed Sobhy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #2563EB;
+      --dark: #0B0F19;
+      --dark-card: #111827;
+      --dark-border: #1F2937;
+      --text: #F3F4F6;
+      --text-muted: #9CA3AF;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--dark);
+      color: var(--text);
+      min-height: 100vh;
+    }
+    .container { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+    a { color: inherit; text-decoration: none; }
+
+    .header {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--dark-border);
+    }
+    .header .container { display: flex; align-items: center; justify-content: space-between; }
+    .back-btn { display: inline-flex; align-items: center; gap: 8px; color: var(--text-muted); font-size: 0.9rem; transition: color 0.3s; }
+    .back-btn:hover { color: var(--primary); }
+    .header-title { font-size: 0.9rem; color: var(--text-muted); }
+
+    .hero {
+      padding: 60px 0 40px;
+      text-align: center;
+    }
+    .hero h1 { font-size: 2.5rem; font-weight: 900; }
+    @media (min-width: 768px) { .hero h1 { font-size: 3rem; } }
+    .hero .sub { color: var(--primary); font-size: 1.1rem; margin-top: 8px; font-weight: 500; }
+    .hero .date { color: var(--text-muted); font-size: 0.9rem; margin-top: 4px; }
+
+    .intro {
+      background: var(--dark-card);
+      border: 1px solid var(--dark-border);
+      border-radius: 14px;
+      padding: 30px;
+      margin-bottom: 40px;
+      line-height: 1.9;
+      color: #D1D5DB;
+      font-size: 1rem;
+    }
+    .intro strong { color: white; }
+    .intro p + p { margin-top: 14px; }
+    .tags { margin-top: 14px; }
+    .tag {
+      display: inline-block;
+      background: rgba(37,99,235,0.1);
+      border: 1px solid rgba(37,99,235,0.3);
+      color: var(--primary);
+      padding: 5px 16px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      margin: 4px 4px 4px 0;
+    }
+
+    .entry {
+      display: grid;
+      gap: 20px 40px;
+      margin-bottom: 40px;
+      align-items: start;
+    }
+    @media (min-width: 768px) {
+      .entry { grid-template-columns: 1fr 1fr; }
+      .entry.reverse .entry-img { order: 2; }
+      .entry.reverse .entry-text { order: 1; }
+    }
+    .entry-img img {
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid var(--dark-border);
+      transition: transform 0.3s;
+    }
+    .entry-img img:hover { transform: scale(1.02); }
+    .entry-text h3 { font-size: 1.1rem; font-weight: 700; color: white; margin-bottom: 10px; }
+    .entry-text h3 i { color: var(--primary); margin-right: 8px; }
+    .entry-text p { color: #D1D5DB; line-height: 1.8; font-size: 0.95rem; }
+
+    .cert-box {
+      background: linear-gradient(135deg, rgba(234,179,8,0.05), transparent);
+      border: 1px solid rgba(234,179,8,0.2);
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 40px;
+    }
+    @media (min-width: 768px) {
+      .cert-box { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: center; }
+    }
+    .cert-box img { width: 100%; border-radius: 10px; border: 1px solid var(--dark-border); }
+    .cert-box h3 { font-size: 1.2rem; font-weight: 700; color: white; margin-bottom: 8px; }
+    .cert-box h3 i { color: #EAB308; margin-right: 8px; }
+    .cert-box p { color: #D1D5DB; line-height: 1.8; font-size: 0.95rem; }
+
+    .footer {
+      text-align: center;
+      padding: 30px 0;
+      border-top: 1px solid var(--dark-border);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="container">
+      <a href="Ahmed Sobhy Portofilo.html" class="back-btn">
+        <i class="fas fa-arrow-left"></i> Back to Portfolio
+      </a>
+      <span class="header-title">RC BOAT PROJECT</span>
+    </div>
+  </div>
+
+  <div class="hero">
+    <h1>RC <span style="background:linear-gradient(135deg,var(--primary),var(--primary-hover));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">BOAT</span></h1>
+    <div class="sub">University Project &amp; Showcase</div>
+    <div class="date">University Event</div>
+  </div>
+
+  <div class="container">
+
+    <div class="intro">
+      <p>
+        Designed and showcased an <strong>RC boat project</strong>. Presented it to prospective students, faculty members, and university leadership, promoting hands-on engineering and innovation.
+      </p>
+      <p>
+        Received a <strong>Certificate of Appreciation</strong> for my contribution.
+      </p>
+      <div class="tags">
+        <span class="tag">Embedded Systems</span>
+        <span class="tag">RC Boat</span>
+        <span class="tag">Wireless Control</span>
+        <span class="tag">Microcontroller</span>
+        <span class="tag">Motor Driver</span>
+        <span class="tag">RF Communication</span>
+        <span class="tag">Hands-On Engineering</span>
+      </div>
+    </div>
+
+    <!-- CERTIFICATE -->
+    <div class="cert-box">
+      <div>
+        <img src="new-image.jpeg" alt="Certificate of Appreciation" />
+      </div>
+      <div>
+        <h3><i class="fas fa-certificate"></i> Certificate of Appreciation</h3>
+        <p>
+          Received a Certificate of Appreciation for designing and showcasing the RC boat project, promoting innovation and hands-on engineering at the university event.
+        </p>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin: 20px 0 40px;">
+      <a href="Ahmed Sobhy Portofilo.html" style="display:inline-flex;align-items:center;gap:8px;color:var(--primary);font-weight:600;font-size:1.05rem;transition:color 0.3s;">
+        <i class="fas fa-arrow-left"></i> Back to Portfolio
+      </a>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <p>&copy; 2026 Ahmed Mohamed Sobhy Mostafa</p>
+  </div>
+
+</body>
+</html>
