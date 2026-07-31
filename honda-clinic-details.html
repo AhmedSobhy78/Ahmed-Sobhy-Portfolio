@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Spark X Racing Team - Ahmed Sobhy</title>
+  <title>Honda Clinic Intern - Ahmed Sobhy</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -12,6 +12,7 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     :root {
       --primary: #2563EB;
+      --primary-hover: #1D4ED8;
       --dark: #0B0F19;
       --dark-card: #111827;
       --dark-border: #1F2937;
@@ -40,7 +41,6 @@
       padding: 60px 0 40px;
       text-align: center;
     }
-    .hero-logo { width: 120px; height: 120px; border-radius: 20px; object-fit: cover; margin-bottom: 16px; border: 2px solid var(--dark-border); }
     .hero h1 { font-size: 2.5rem; font-weight: 900; }
     @media (min-width: 768px) { .hero h1 { font-size: 3rem; } }
     .hero .sub { color: var(--primary); font-size: 1.1rem; margin-top: 8px; font-weight: 500; }
@@ -70,27 +70,22 @@
       margin: 4px 4px 4px 0;
     }
 
-    .entry {
+    .gallery {
       display: grid;
-      gap: 20px 40px;
+      gap: 24px;
       margin-bottom: 40px;
-      align-items: start;
     }
-    @media (min-width: 768px) {
-      .entry { grid-template-columns: 1fr 1fr; }
-      .entry.reverse .entry-img { order: 2; }
-      .entry.reverse .entry-text { order: 1; }
-    }
-    .entry-img img {
-      width: 100%;
-      border-radius: 12px;
+    @media (min-width: 640px) { .gallery { grid-template-columns: repeat(2, 1fr); } }
+    .gallery-item {
+      background: var(--dark-card);
       border: 1px solid var(--dark-border);
-      transition: transform 0.3s;
+      border-radius: 14px;
+      overflow: hidden;
     }
-    .entry-img img:hover { transform: scale(1.02); }
-    .entry-text h3 { font-size: 1.1rem; font-weight: 700; color: white; margin-bottom: 10px; }
-    .entry-text h3 i { color: var(--primary); margin-right: 8px; }
-    .entry-text p { color: #D1D5DB; line-height: 1.8; font-size: 0.95rem; }
+    .gallery-item img {
+      width: 100%;
+      display: block;
+    }
 
     .footer {
       text-align: center;
@@ -109,51 +104,62 @@
       <a href="index.html" class="back-btn">
         <i class="fas fa-arrow-left"></i> Back to Portfolio
       </a>
-      <span class="header-title">SPARK X RACING TEAM</span>
+      <span class="header-title">HONDA CLINIC INTERN</span>
     </div>
   </div>
 
   <div class="hero">
-    <img src="sparkx-logo.jpeg" alt="Spark X Racing Team" class="hero-logo" />
-    <p style="color:var(--text-muted);font-size:0.85rem;margin:4px 0 12px;">Spark X Racing Team</p>
-    <h1>SPARK X <span style="background:linear-gradient(135deg,var(--primary),var(--primary-hover));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">RACING TEAM</span></h1>
-    <div class="sub">Electrical Team Leader</div>
-    <div class="date">Feb 2025 &mdash; Present</div>
+    <h1>HONDA <span style="background:linear-gradient(135deg,var(--primary),var(--primary-hover));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">CLINIC</span></h1>
+    <div class="sub">Automotive Maintenance &amp; Repair Internship</div>
+    <div class="date">Summer Internship 2026</div>
   </div>
 
   <div class="container">
 
     <div class="intro">
       <p>
-        As the <strong>Electrical Team Leader</strong> of <strong>Spark X Racing Team</strong>, I led the electrical systems division in designing, building, and testing the embedded systems powering our Formula Student race car.
-      </p>
-      <p>
-        <strong>Key areas of involvement:</strong>
+        Completed an internship at <strong>Honda Clinic</strong>, gaining hands-on experience in automotive maintenance, diagnostics, and repair. Worked alongside experienced technicians on real vehicles, learning professional workshop practices and Honda service standards.
       </p>
       <div class="tags">
-        <span class="tag">Embedded Systems</span>
-        <span class="tag">EV Technologies</span>
-        <span class="tag">Battery Management</span>
-        <span class="tag">High Voltage Systems</span>
-        <span class="tag">Wiring Harness</span>
-        <span class="tag">CAN Bus</span>
-        <span class="tag">Sensor Integration</span>
-        <span class="tag">Team Leadership</span>
+        <span class="tag">Automotive</span>
+        <span class="tag">Vehicle Diagnostics</span>
+        <span class="tag">Maintenance</span>
+        <span class="tag">Repair</span>
+        <span class="tag">Honda</span>
+        <span class="tag">Workshop</span>
       </div>
     </div>
 
+    <div class="gallery">
 
-    <div style="margin-bottom:40px;">
-      <p style="color:#D1D5DB;line-height:1.9;font-size:1rem;">
-        As the Electrical Team Leader of Spark X Racing Team, I led the electrical systems division in designing, building, and testing the embedded systems powering our Formula Student race car. My responsibilities included:
-      </p>
-      <ul style="color:#D1D5DB;line-height:2;font-size:0.95rem;margin-top:16px;padding-left:20px;">
-        <li>Designing and integrating a <strong>lithium battery pack</strong> with a BMS (Battery Management System) for safe and efficient power delivery.</li>
-        <li>Developing the <strong>wiring harness</strong> and CAN bus communication network connecting the VCU, BMS, motor controller, and sensors.</li>
-        <li>Implementing <strong>high-voltage safety protocols</strong> compliant with Formula Student regulations.</li>
-        <li>Conducting electrical testing, fault diagnosis, and performance optimization of all onboard systems.</li>
-        <li>Leading a team of electrical engineering students, coordinating tasks, and managing project timelines.</li>
-      </ul>
+      <div class="gallery-item">
+        <img src="honda-clinic/workshop-1.jpg" alt="Honda Clinic 1" />
+      </div>
+
+      <div class="gallery-item">
+        <img src="honda-clinic/workshop-2.jpg" alt="Honda Clinic 2" />
+      </div>
+
+      <div class="gallery-item">
+        <img src="honda-clinic/workshop-3.jpg" alt="Honda Clinic 3" />
+      </div>
+
+      <div class="gallery-item">
+        <img src="honda-clinic/workshop-4.jpg" alt="Honda Clinic 4" />
+      </div>
+
+      <div class="gallery-item">
+        <img src="honda-clinic/workshop-5.jpg" alt="Honda Clinic 5" />
+      </div>
+
+      <div class="gallery-item">
+        <img src="honda-clinic/workshop-6.jpg" alt="Honda Clinic 6" />
+      </div>
+
+      <div class="gallery-item">
+        <img src="honda-clinic/workshop-7.jpg" alt="Honda Clinic 7" />
+      </div>
+
     </div>
 
     <div style="text-align:center; margin: 20px 0 40px;">

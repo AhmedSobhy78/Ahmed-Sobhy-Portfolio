@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Spark X Racing Team - Ahmed Sobhy</title>
+  <title>Digital Clock - Ahmed Sobhy</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -12,6 +12,7 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     :root {
       --primary: #2563EB;
+      --primary-hover: #1D4ED8;
       --dark: #0B0F19;
       --dark-card: #111827;
       --dark-border: #1F2937;
@@ -40,7 +41,6 @@
       padding: 60px 0 40px;
       text-align: center;
     }
-    .hero-logo { width: 120px; height: 120px; border-radius: 20px; object-fit: cover; margin-bottom: 16px; border: 2px solid var(--dark-border); }
     .hero h1 { font-size: 2.5rem; font-weight: 900; }
     @media (min-width: 768px) { .hero h1 { font-size: 3rem; } }
     .hero .sub { color: var(--primary); font-size: 1.1rem; margin-top: 8px; font-weight: 500; }
@@ -92,6 +92,31 @@
     .entry-text h3 i { color: var(--primary); margin-right: 8px; }
     .entry-text p { color: #D1D5DB; line-height: 1.8; font-size: 0.95rem; }
 
+    .report-box {
+      background: linear-gradient(135deg, rgba(37,99,235,0.05), transparent);
+      border: 1px solid rgba(37,99,235,0.2);
+      border-radius: 14px;
+      padding: 30px;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    .report-box h3 { font-size: 1.2rem; font-weight: 700; color: white; margin-bottom: 8px; }
+    .report-box h3 i { color: var(--primary); margin-right: 8px; }
+    .report-box p { color: #D1D5DB; line-height: 1.8; font-size: 0.95rem; margin-bottom: 16px; }
+    .report-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary);
+      color: white;
+      padding: 12px 28px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+    .report-btn:hover { background: var(--primary-hover); }
+
     .footer {
       text-align: center;
       padding: 30px 0;
@@ -109,51 +134,66 @@
       <a href="index.html" class="back-btn">
         <i class="fas fa-arrow-left"></i> Back to Portfolio
       </a>
-      <span class="header-title">SPARK X RACING TEAM</span>
+      <span class="header-title">DIGITAL CLOCK</span>
     </div>
   </div>
 
   <div class="hero">
-    <img src="sparkx-logo.jpeg" alt="Spark X Racing Team" class="hero-logo" />
-    <p style="color:var(--text-muted);font-size:0.85rem;margin:4px 0 12px;">Spark X Racing Team</p>
-    <h1>SPARK X <span style="background:linear-gradient(135deg,var(--primary),var(--primary-hover));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">RACING TEAM</span></h1>
-    <div class="sub">Electrical Team Leader</div>
-    <div class="date">Feb 2025 &mdash; Present</div>
+    <h1>DIGITAL <span style="background:linear-gradient(135deg,var(--primary),var(--primary-hover));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">CLOCK</span></h1>
+    <div class="sub">ATmega32 &amp; 7-Segment Display Project</div>
+    <div class="date">University Project</div>
   </div>
 
   <div class="container">
 
     <div class="intro">
       <p>
-        As the <strong>Electrical Team Leader</strong> of <strong>Spark X Racing Team</strong>, I led the electrical systems division in designing, building, and testing the embedded systems powering our Formula Student race car.
+        A <strong>digital clock system</strong> built using an <strong>ATmega32 microcontroller</strong> with <strong>six 7-segment displays</strong> (two for hours, two for minutes, two for seconds). The system tracks real time with accurate second-by-second updates and supports features like <strong>pause, reset, and time adjustment</strong> using push buttons.
       </p>
       <p>
-        <strong>Key areas of involvement:</strong>
+        Designed and simulated in <strong>Proteus</strong>, the project demonstrates embedded systems concepts including timer/counter interfacing, multiplexed display control, and button debouncing.
       </p>
       <div class="tags">
-        <span class="tag">Embedded Systems</span>
-        <span class="tag">EV Technologies</span>
-        <span class="tag">Battery Management</span>
-        <span class="tag">High Voltage Systems</span>
-        <span class="tag">Wiring Harness</span>
-        <span class="tag">CAN Bus</span>
-        <span class="tag">Sensor Integration</span>
-        <span class="tag">Team Leadership</span>
+        <span class="tag">ATmega32</span>
+        <span class="tag">7-Segment Display</span>
+        <span class="tag">Proteus</span>
+        <span class="tag">Embedded C</span>
+        <span class="tag">Multiplexing</span>
+        <span class="tag">Timer/Interrupts</span>
+        <span class="tag">Microcontroller</span>
       </div>
     </div>
 
+    <!-- Image -->
+    <div class="entry">
+      <div class="entry-img">
+        <img src="digital-clock.jpeg" alt="Digital Clock Proteus Simulation" />
+      </div>
+      <div class="entry-text">
+        <h3><i class="fas fa-microchip"></i> Proteus Simulation</h3>
+        <p>
+          The complete circuit designed in Proteus showing the ATmega32 connected to six 7-segment displays via multiplexed control, with push buttons for pause, reset, and time adjustment.
+        </p>
+      </div>
+    </div>
 
-    <div style="margin-bottom:40px;">
-      <p style="color:#D1D5DB;line-height:1.9;font-size:1rem;">
-        As the Electrical Team Leader of Spark X Racing Team, I led the electrical systems division in designing, building, and testing the embedded systems powering our Formula Student race car. My responsibilities included:
+    <!-- VIDEO -->
+    <div style="background:var(--dark-card);border:1px solid var(--dark-border);border-radius:14px;padding:24px;margin-bottom:40px;text-align:center;">
+      <h3 style="font-size:1.1rem;font-weight:700;color:white;margin-bottom:12px;"><i class="fas fa-video" style="color:var(--primary);margin-right:8px;"></i> Project Video</h3>
+      <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:10px;">
+        <iframe src="https://drive.google.com/file/d/1DNbLYx_ayaaEHYVFZDmZ1iWl7o4TyNm8/preview?hl=en" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;" allow="autoplay" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <!-- Report -->
+    <div class="report-box">
+      <h3><i class="fas fa-file-pdf"></i> Project Report</h3>
+      <p>
+        Download the full project report covering the circuit design, code explanation, simulation results, and conclusion.
       </p>
-      <ul style="color:#D1D5DB;line-height:2;font-size:0.95rem;margin-top:16px;padding-left:20px;">
-        <li>Designing and integrating a <strong>lithium battery pack</strong> with a BMS (Battery Management System) for safe and efficient power delivery.</li>
-        <li>Developing the <strong>wiring harness</strong> and CAN bus communication network connecting the VCU, BMS, motor controller, and sensors.</li>
-        <li>Implementing <strong>high-voltage safety protocols</strong> compliant with Formula Student regulations.</li>
-        <li>Conducting electrical testing, fault diagnosis, and performance optimization of all onboard systems.</li>
-        <li>Leading a team of electrical engineering students, coordinating tasks, and managing project timelines.</li>
-      </ul>
+      <a href="Digital Clock Report.pdf" target="_blank" class="report-btn">
+        <i class="fas fa-download"></i> Download Report
+      </a>
     </div>
 
     <div style="text-align:center; margin: 20px 0 40px;">
