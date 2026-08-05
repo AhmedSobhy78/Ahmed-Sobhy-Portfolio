@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ahmed Mohamed Sobhy | Mechatronics &amp; Robotics Engineer</title>
   <meta name="description" content="Personal brand website of Ahmed Mohamed Sobhy Mostafa - Mechatronics & Robotics Engineering Student, Embedded Systems Engineer, Web Developer, and EV Enthusiast." />
+  <link rel="icon" href="favicon.ico" sizes="48x48" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -197,10 +202,19 @@
       justify-content: space-between;
     }
     .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
       font-size: 1.15rem;
       font-weight: 800;
       letter-spacing: 0.06em;
       color: white;
+    }
+    .nav-logo-img {
+      width: 34px;
+      height: 34px;
+      border-radius: 9px;
+      box-shadow: 0 0 0 1px rgba(251,191,36,0.4), 0 4px 12px rgba(0,0,0,0.45);
     }
     .nav-links {
       display: flex;
@@ -491,6 +505,63 @@
     }
     .about-text { color: #D1D5DB; line-height: 1.9; font-size: 1.06rem; }
     .about-text p + p { margin-top: 16px; }
+    .about-content { display: flex; flex-direction: column; }
+    .about-stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 30px;
+    }
+    .stat-card {
+      position: relative;
+      text-align: center;
+      padding: 20px 12px 18px;
+      border-radius: 16px;
+      background:
+        radial-gradient(120% 120% at 100% 0%, rgba(37,99,235,0.08), transparent 60%),
+        var(--dark-card);
+      border: 1px solid var(--dark-border);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .stat-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(37,99,235,0.45);
+      box-shadow: var(--shadow-hover);
+    }
+    .stat-icon {
+      width: 40px;
+      height: 40px;
+      margin: 0 auto 10px;
+      border-radius: 11px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      color: #BFDBFE;
+      background: linear-gradient(135deg, rgba(37,99,235,0.2), rgba(37,99,235,0.06));
+      border: 1px solid rgba(37,99,235,0.3);
+      transition: transform 0.3s ease;
+    }
+    .stat-card:hover .stat-icon { transform: scale(1.07); }
+    .stat-value {
+      font-size: 1.7rem;
+      font-weight: 800;
+      color: white;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      font-variant-numeric: tabular-nums;
+    }
+    .stat-value.plus::after { content: '+'; color: var(--primary); }
+    .stat-label {
+      margin-top: 5px;
+      font-size: 0.76rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
 
     /* ===== BLOCKS GRID ===== */
     .blocks-grid {
@@ -1066,7 +1137,10 @@
   <!-- ===== NAVBAR ===== -->
   <nav class="navbar" id="navbar">
     <div class="container nav-container">
-      <a href="#hero" class="nav-logo">AHMED <span class="gradient-text">SOBHY</span></a>
+      <a href="#hero" class="nav-logo">
+        <img src="as-logo.png" alt="AS" class="nav-logo-img" />
+        AHMED <span class="gradient-text">SOBHY</span>
+      </a>
       <ul class="nav-links" id="navLinks">
         <li><a href="#about" class="nav-link active">About</a></li>
         <li><a href="#experience" class="nav-link">Experience</a></li>
@@ -1346,10 +1420,34 @@
             <img src="profile.jpg" alt="Ahmed Mohamed Sobhy" style="width:100%;height:100%;object-fit:cover;" />
           </div>
         </div>
-        <div class="about-text fade-right">
-          <p>
-            Engineering student driven by innovation in Embedded Systems, Electric Vehicles, Robotics, and Automation. I transform ideas into real-world solutions through hands-on engineering, modern web development, and continuous technical growth, aiming to build technologies that make a real impact.
-          </p>
+        <div class="about-content fade-right">
+          <div class="about-text">
+            <p>
+              Engineering student driven by innovation in Embedded Systems, Electric Vehicles, Robotics, and Automation. I transform ideas into real-world solutions through hands-on engineering, modern web development, and continuous technical growth, aiming to build technologies that make a real impact.
+            </p>
+          </div>
+          <div class="about-stats fade-up delay-1">
+            <div class="stat-card">
+              <div class="stat-icon"><i class="fas fa-briefcase"></i></div>
+              <div class="stat-value" data-count="4">0</div>
+              <div class="stat-label">Internships</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon"><i class="fas fa-diagram-project"></i></div>
+              <div class="stat-value plus" data-count="5">0</div>
+              <div class="stat-label">Projects</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon"><i class="fas fa-certificate"></i></div>
+              <div class="stat-value" data-count="5">0</div>
+              <div class="stat-label">Certifications</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon"><i class="fas fa-hammer"></i></div>
+              <div class="stat-value" data-count="2">0</div>
+              <div class="stat-label">Years Building</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -1786,6 +1884,27 @@
 
     // ===== BACK TO TOP =====
     backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // ===== STAT COUNT-UP =====
+    const statValues = document.querySelectorAll('.stat-value[data-count]');
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        const target = parseInt(el.dataset.count, 10);
+        const duration = 1100;
+        const start = performance.now();
+        const ease = t => 1 - Math.pow(1 - t, 3);
+        const tick = (now) => {
+          const p = Math.min((now - start) / duration, 1);
+          el.textContent = Math.round(ease(p) * target);
+          if (p < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+        statsObserver.unobserve(el);
+      });
+    }, { threshold: 0.4 });
+    statValues.forEach(el => statsObserver.observe(el));
 
     // ===== PARTICLES =====
     const particleBox = document.getElementById('bgParticles');
