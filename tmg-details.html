@@ -3,243 +3,314 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TMG Intern - Ahmed Sobhy</title>
+  <title>Talaat Moustafa Group | Engineering Intern - Ahmed Sobhy</title>
+  <meta name="description" content="Engineering internship at Talaat Moustafa Group (TMG) - hands-on experience in project management, site operations, and engineering execution for one of Egypt's leading real estate developers." />
+  <link rel="icon" href="favicon.ico" sizes="48x48" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    :root {
-      --primary: #2563EB;
-      --primary-hover: #1D4ED8;
-      --dark: #0B0F19;
-      --dark-card: #111827;
-      --dark-border: #1F2937;
-      --text: #F3F4F6;
-      --text-muted: #9CA3AF;
-    }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--dark);
-      color: var(--text);
-      min-height: 100vh;
-    }
-    .container { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
-    a { color: inherit; text-decoration: none; }
-
-    .header {
-      padding: 20px 0;
-      border-bottom: 1px solid var(--dark-border);
-    }
-    .header .container { display: flex; align-items: center; justify-content: space-between; }
-    .back-btn { display: inline-flex; align-items: center; gap: 8px; color: var(--text-muted); font-size: 0.9rem; transition: color 0.3s; }
-    .back-btn:hover { color: var(--primary); }
-    .header-title { font-size: 0.9rem; color: var(--text-muted); }
-
-    .hero {
-      padding: 60px 0 40px;
-      text-align: center;
-    }
-    .hero h1 { font-size: 2.5rem; font-weight: 900; }
-    @media (min-width: 768px) { .hero h1 { font-size: 3rem; } }
-    .hero .sub { color: var(--primary); font-size: 1.1rem; margin-top: 8px; font-weight: 500; }
-    .hero .date { color: var(--text-muted); font-size: 0.9rem; margin-top: 4px; }
-
-    .intro {
-      background: var(--dark-card);
-      border: 1px solid var(--dark-border);
-      border-radius: 14px;
-      padding: 30px;
-      margin-bottom: 40px;
-      line-height: 1.9;
-      color: #D1D5DB;
-      font-size: 1rem;
-    }
-    .intro strong { color: white; }
-    .intro p + p { margin-top: 14px; }
-    .tags { margin-top: 14px; }
-    .tag {
-      display: inline-block;
-      background: rgba(37,99,235,0.1);
-      border: 1px solid rgba(37,99,235,0.3);
-      color: var(--primary);
-      padding: 5px 16px;
-      border-radius: 20px;
-      font-size: 0.85rem;
-      margin: 4px 4px 4px 0;
-    }
-
-    .gallery {
-      display: grid;
-      gap: 24px;
-      margin-bottom: 40px;
-    }
-    @media (min-width: 640px) { .gallery { grid-template-columns: repeat(2, 1fr); } }
-    .gallery-item {
-      background: var(--dark-card);
-      border: 1px solid var(--dark-border);
-      border-radius: 14px;
-      overflow: hidden;
-    }
-    .gallery-item img {
-      width: 100%;
-      display: block;
-    }
-
-    .footer {
-      text-align: center;
-      padding: 30px 0;
-      border-top: 1px solid var(--dark-border);
-      color: var(--text-muted);
-      font-size: 0.85rem;
-      margin-top: 20px;
-    }
-  </style>
+  <link rel="stylesheet" href="exp-style.css" />
 </head>
 <body>
 
-  <div class="header">
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="exp-navbar" id="expNavbar">
+    <div class="container exp-nav-inner">
+      <a href="index.html" class="exp-nav-logo">
+        <img src="as-logo.png" alt="AS" />
+        <span class="text">AHMED <span class="gradient-text">SOBHY</span></span>
+      </a>
+      <a href="index.html#experience" class="exp-nav-back"><i class="fas fa-arrow-left"></i> Experiences</a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <header class="exp-hero">
     <div class="container">
-      <a href="index.html" class="back-btn">
-        <i class="fas fa-arrow-left"></i> Back to Portfolio
-      </a>
-      <span class="header-title">TMG INTERN</span>
-    </div>
-  </div>
-
-  <div class="hero">
-    <h1>TALAAT MOUSTAFA <span style="background:linear-gradient(135deg,var(--primary),var(--primary-hover));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">GROUP</span></h1>
-    <div class="sub">Engineering Internship</div>
-    <div class="date">July Internship 2026</div>
-  </div>
-
-  <div class="container">
-
-    <div class="intro">
-      <p>
-        Currently undergoing an engineering internship at <strong>Talaat Moustafa Group (TMG)</strong>, one of Egypt's leading real estate and urban development companies. Gaining hands-on experience in project management, site operations, and engineering execution.
-      </p>
-      <div class="tags">
-        <span class="tag">Mechanical Engineering</span>
-        <span class="tag">Electrical Engineering</span>
-        <span class="tag">Project Management</span>
-        <span class="tag">Site Operations</span>
-        <span class="tag">Engineering</span>
-        <span class="tag">Construction</span>
+      <div class="exp-hero-inner">
+        <div class="exp-hero-logo light"><img src="tmg-logo.webp" alt="Talaat Moustafa Group" /></div>
+        <div class="exp-hero-content">
+          <span class="exp-hero-kicker">Experience</span>
+          <h1 class="exp-hero-title">TALAAT MOUSTAFA <span class="gradient-text">GROUP</span></h1>
+          <p class="exp-hero-role">Engineering Intern</p>
+          <div class="exp-hero-meta">
+            <span class="exp-meta-item"><i class="fas fa-briefcase"></i> Talaat Moustafa Group</span>
+            <span class="exp-meta-item"><i class="fas fa-calendar-alt"></i> July Internship 2026</span>
+            <span class="exp-meta-item"><i class="fas fa-city"></i> Egypt</span>
+          </div>
+          <p class="exp-hero-summary">
+            Engineering internship at Talaat Moustafa Group (TMG). Hands-on exposure to project management, site operations, and engineering execution.
+          </p>
+        </div>
       </div>
     </div>
+  </header>
 
-    <div class="gallery">
+  <!-- ===== CONTENT ===== -->
+  <main class="container exp-main">
 
-      <div class="gallery-item">
-        <img src="tmg-intern/tmg-01.jpg" alt="TMG 1" />
-        
+    <!-- 01 OVERVIEW & ROLE -->
+    <section class="exp-section">
+      <div class="exp-section-head reveal">
+        <span class="exp-section-num">01</span>
+        <div>
+          <h2 class="exp-section-title">Overview &amp; Role</h2>
+          <p class="exp-section-sub">The company, the internship, and my responsibilities.</p>
+        </div>
       </div>
-
-      <div class="gallery-item">
-        <img src="tmg-intern/tmg-02.jpg" alt="TMG 2" />
-        
+      <div class="exp-card reveal">
+        <div class="exp-combo">
+          <div class="exp-combo-col">
+            <h4 class="exp-mini-title"><i class="fas fa-circle-info"></i> Overview</h4>
+            <p>
+              Talaat Moustafa Group (TMG) is one of Egypt's leading real estate and urban development companies. The internship gives engineering students hands-on exposure to project management, site operations, and engineering execution.
+            </p>
+          </div>
+          <div class="exp-combo-col">
+            <h4 class="exp-mini-title"><i class="fas fa-list-check"></i> My Role &amp; Responsibilities</h4>
+            <ul class="exp-bullet-list">
+              <li><span class="bl-ic"><i class="fas fa-check"></i></span> Supporting <strong>site operations</strong> and observing how engineering is executed on live projects.</li>
+              <li><span class="bl-ic"><i class="fas fa-check"></i></span> Gaining insight into <strong>project management</strong>, scheduling, and coordination across teams.</li>
+              <li><span class="bl-ic"><i class="fas fa-check"></i></span> Exploring <strong>mechanical and electrical systems</strong> within building and development works.</li>
+              <li><span class="bl-ic"><i class="fas fa-check"></i></span> Learning how <strong>quality and construction standards</strong> are managed on site.</li>
+              <li><span class="bl-ic"><i class="fas fa-check"></i></span> Building practical awareness of <strong>engineering execution</strong> from design to delivery.</li>
+            </ul>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="gallery-item">
-        <img src="tmg-intern/tmg-03.jpg" alt="TMG 3" />
-        
+    <!-- 02 TECHNICAL HIGHLIGHTS & TOOLS -->
+    <section class="exp-section">
+      <div class="exp-section-head reveal">
+        <span class="exp-section-num">02</span>
+        <div>
+          <h2 class="exp-section-title">Highlights &amp; Tools</h2>
+          <p class="exp-section-sub">Key areas covered and the technologies used.</p>
+        </div>
       </div>
-
-      <div class="gallery-item">
-        <img src="tmg-intern/tmg-04.jpg" alt="TMG 4" />
-        
+      <div class="exp-card reveal">
+        <div class="exp-combo">
+          <div class="exp-combo-col">
+            <h4 class="exp-mini-title"><i class="fas fa-lightbulb"></i> Technical Highlights</h4>
+            <ul class="exp-highlight-list">
+              <li><span class="hl-ic"><i class="fas fa-trowel-bricks"></i></span> <span><strong>Site operations</strong> in large-scale development projects</span></li>
+              <li><span class="hl-ic"><i class="fas fa-list-check"></i></span> <span><strong>Project scheduling</strong> and coordination</span></li>
+              <li><span class="hl-ic"><i class="fas fa-gears"></i></span> <span><strong>Mechanical systems</strong> in construction</span></li>
+              <li><span class="hl-ic"><i class="fas fa-bolt"></i></span> <span><strong>Electrical systems</strong> and installations</span></li>
+              <li><span class="hl-ic"><i class="fas fa-clipboard-check"></i></span> <span><strong>Construction quality</strong> and standards</span></li>
+              <li><span class="hl-ic"><i class="fas fa-diagram-project"></i></span> <span><strong>Engineering execution</strong> from design to delivery</span></li>
+            </ul>
+          </div>
+          <div class="exp-combo-col">
+            <h4 class="exp-mini-title"><i class="fas fa-toolbox"></i> Technologies &amp; Tools Used</h4>
+            <div class="exp-chip-grid">
+              <span class="exp-chip"><i class="fas fa-gears"></i> Mechanical Engineering</span>
+              <span class="exp-chip"><i class="fas fa-bolt"></i> Electrical Engineering</span>
+              <span class="exp-chip"><i class="fas fa-list-check"></i> Project Management</span>
+              <span class="exp-chip"><i class="fas fa-trowel-bricks"></i> Site Operations</span>
+              <span class="exp-chip"><i class="fas fa-city"></i> Construction Engineering</span>
+              <span class="exp-chip"><i class="fas fa-clipboard-check"></i> Quality Control</span>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="gallery-item">
-        <img src="tmg-intern/tmg-05.jpg" alt="TMG 5" />
-        
+    <!-- 03 CHALLENGES & IMPACT -->
+    <section class="exp-section">
+      <div class="exp-section-head reveal">
+        <span class="exp-section-num">03</span>
+        <div>
+          <h2 class="exp-section-title">Challenges &amp; Impact</h2>
+          <p class="exp-section-sub">Hurdles I faced and the results I delivered.</p>
+        </div>
       </div>
-
-      <div class="gallery-item">
-        <img src="tmg-intern/tmg-06.jpg" alt="TMG 6" />
-        
+      <div class="exp-card reveal">
+        <div class="exp-combo">
+          <div class="exp-combo-col">
+            <h4 class="exp-mini-title"><i class="fas fa-triangle-exclamation"></i> Challenges &amp; Problem Solving</h4>
+            <ul class="exp-bullet-list">
+              <li><span class="bl-ic"><i class="fas fa-circle"></i></span> Coordinating many disciplines and activities across large-scale projects.</li>
+              <li><span class="bl-ic"><i class="fas fa-circle"></i></span> Reading the site and understanding how engineering stages connect.</li>
+              <li><span class="bl-ic"><i class="fas fa-circle"></i></span> Applying academic knowledge to practical constraints.</li>
+            </ul>
+          </div>
+          <div class="exp-combo-col">
+            <h4 class="exp-mini-title"><i class="fas fa-rocket"></i> Results &amp; Impact</h4>
+            <p>
+              Gaining hands-on exposure to project management, site operations, and engineering execution &mdash; plus practical insight into how mechanical and electrical engineering fit into real projects.
+            </p>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="gallery-item">
-        <img src="tmg-intern/tmg-07.jpg" alt="TMG 7" />
-        
+    <!-- 04 GALLERY -->
+    <section class="exp-section">
+      <div class="exp-section-head reveal">
+        <span class="exp-section-num">04</span>
+        <div>
+          <h2 class="exp-section-title">Gallery</h2>
+          <p class="exp-section-sub">Moments from the internship.</p>
+        </div>
       </div>
-
-      <div class="gallery-item">
-        <img src="tmg-intern/tmg-08.jpg" alt="TMG 8" />
-        
+      <div class="exp-gallery">
+        <figure class="exp-gallery-item" data-src="tmg-intern/tmg-01.jpg">
+          <img src="tmg-intern/tmg-01.jpg" alt="Image 01" loading="lazy" />
+          <figcaption class="exp-gallery-label">Image 01</figcaption>
+          <span class="exp-gallery-zoom"><i class="fas fa-expand"></i></span>
+        </figure>
+        <figure class="exp-gallery-item" data-src="tmg-intern/tmg-02.jpg">
+          <img src="tmg-intern/tmg-02.jpg" alt="Image 02" loading="lazy" />
+          <figcaption class="exp-gallery-label">Image 02</figcaption>
+          <span class="exp-gallery-zoom"><i class="fas fa-expand"></i></span>
+        </figure>
+        <figure class="exp-gallery-item" data-src="tmg-intern/tmg-03.jpg">
+          <img src="tmg-intern/tmg-03.jpg" alt="Image 03" loading="lazy" />
+          <figcaption class="exp-gallery-label">Image 03</figcaption>
+          <span class="exp-gallery-zoom"><i class="fas fa-expand"></i></span>
+        </figure>
+        <figure class="exp-gallery-item" data-src="tmg-intern/tmg-04.jpg">
+          <img src="tmg-intern/tmg-04.jpg" alt="Image 04" loading="lazy" />
+          <figcaption class="exp-gallery-label">Image 04</figcaption>
+          <span class="exp-gallery-zoom"><i class="fas fa-expand"></i></span>
+        </figure>
+        <figure class="exp-gallery-item" data-src="tmg-intern/tmg-05.jpg">
+          <img src="tmg-intern/tmg-05.jpg" alt="Image 05" loading="lazy" />
+          <figcaption class="exp-gallery-label">Image 05</figcaption>
+          <span class="exp-gallery-zoom"><i class="fas fa-expand"></i></span>
+        </figure>
+        <figure class="exp-gallery-item" data-src="tmg-intern/tmg-06.jpg">
+          <img src="tmg-intern/tmg-06.jpg" alt="Image 06" loading="lazy" />
+          <figcaption class="exp-gallery-label">Image 06</figcaption>
+          <span class="exp-gallery-zoom"><i class="fas fa-expand"></i></span>
+        </figure>
+        <figure class="exp-gallery-item" data-src="tmg-intern/tmg-07.jpg">
+          <img src="tmg-intern/tmg-07.jpg" alt="Image 07" loading="lazy" />
+          <figcaption class="exp-gallery-label">Image 07</figcaption>
+          <span class="exp-gallery-zoom"><i class="fas fa-expand"></i></span>
+        </figure>
+        <figure class="exp-gallery-item" data-src="tmg-intern/tmg-08.jpg">
+          <img src="tmg-intern/tmg-08.jpg" alt="Image 08" loading="lazy" />
+          <figcaption class="exp-gallery-label">Image 08</figcaption>
+          <span class="exp-gallery-zoom"><i class="fas fa-expand"></i></span>
+        </figure>
+        <figure class="exp-gallery-item" data-src="tmg-intern/tmg-09.jpg">
+          <img src="tmg-intern/tmg-09.jpg" alt="Image 09" loading="lazy" />
+          <figcaption class="exp-gallery-label">Image 09</figcaption>
+          <span class="exp-gallery-zoom"><i class="fas fa-expand"></i></span>
+        </figure>
+        <figure class="exp-gallery-item" data-src="tmg-intern/tmg-10.jpg">
+          <img src="tmg-intern/tmg-10.jpg" alt="Image 10" loading="lazy" />
+          <figcaption class="exp-gallery-label">Image 10</figcaption>
+          <span class="exp-gallery-zoom"><i class="fas fa-expand"></i></span>
+        </figure>
+        <figure class="exp-gallery-item" data-src="tmg-intern/tmg-11.jpg">
+          <img src="tmg-intern/tmg-11.jpg" alt="Image 11" loading="lazy" />
+          <figcaption class="exp-gallery-label">Image 11</figcaption>
+          <span class="exp-gallery-zoom"><i class="fas fa-expand"></i></span>
+        </figure>
+        <figure class="exp-gallery-item" data-src="tmg-intern/tmg-12.jpg">
+          <img src="tmg-intern/tmg-12.jpg" alt="Image 12" loading="lazy" />
+          <figcaption class="exp-gallery-label">Image 12</figcaption>
+          <span class="exp-gallery-zoom"><i class="fas fa-expand"></i></span>
+        </figure>
+        <figure class="exp-gallery-item" data-src="tmg-intern/tmg-13.jpg">
+          <img src="tmg-intern/tmg-13.jpg" alt="Image 13" loading="lazy" />
+          <figcaption class="exp-gallery-label">Image 13</figcaption>
+          <span class="exp-gallery-zoom"><i class="fas fa-expand"></i></span>
+        </figure>
+        <figure class="exp-gallery-item" data-src="tmg-intern/tmg-14.jpg">
+          <img src="tmg-intern/tmg-14.jpg" alt="Image 14" loading="lazy" />
+          <figcaption class="exp-gallery-label">Image 14</figcaption>
+          <span class="exp-gallery-zoom"><i class="fas fa-expand"></i></span>
+        </figure>
+        <figure class="exp-gallery-item" data-src="tmg-intern/tmg-15.jpg">
+          <img src="tmg-intern/tmg-15.jpg" alt="Image 15" loading="lazy" />
+          <figcaption class="exp-gallery-label">Image 15</figcaption>
+          <span class="exp-gallery-zoom"><i class="fas fa-expand"></i></span>
+        </figure>
+        <figure class="exp-gallery-item" data-src="tmg-intern/tmg-16.jpg">
+          <img src="tmg-intern/tmg-16.jpg" alt="Image 16" loading="lazy" />
+          <figcaption class="exp-gallery-label">Image 16</figcaption>
+          <span class="exp-gallery-zoom"><i class="fas fa-expand"></i></span>
+        </figure>
+        <figure class="exp-gallery-item" data-src="tmg-intern/tmg-17.jpg">
+          <img src="tmg-intern/tmg-17.jpg" alt="Image 17" loading="lazy" />
+          <figcaption class="exp-gallery-label">Image 17</figcaption>
+          <span class="exp-gallery-zoom"><i class="fas fa-expand"></i></span>
+        </figure>
+        <figure class="exp-gallery-item" data-src="tmg-intern/tmg-18.jpg">
+          <img src="tmg-intern/tmg-18.jpg" alt="Image 18" loading="lazy" />
+          <figcaption class="exp-gallery-label">Image 18</figcaption>
+          <span class="exp-gallery-zoom"><i class="fas fa-expand"></i></span>
+        </figure>
+        <figure class="exp-gallery-item" data-src="tmg-intern/tmg-19.jpg">
+          <img src="tmg-intern/tmg-19.jpg" alt="Image 19" loading="lazy" />
+          <figcaption class="exp-gallery-label">Image 19</figcaption>
+          <span class="exp-gallery-zoom"><i class="fas fa-expand"></i></span>
+        </figure>
       </div>
+    </section>
 
-      <div class="gallery-item">
-        <img src="tmg-intern/tmg-09.jpg" alt="TMG 9" />
-        
+    <!-- 05 SKILLS GAINED -->
+    <section class="exp-section">
+      <div class="exp-section-head reveal">
+        <span class="exp-section-num">05</span>
+        <div>
+          <h2 class="exp-section-title">Skills Gained</h2>
+          <p class="exp-section-sub">Skills I developed through this experience.</p>
+        </div>
       </div>
-
-      <div class="gallery-item">
-        <img src="tmg-intern/tmg-10.jpg" alt="TMG 10" />
-        
+      <div class="exp-card reveal">
+        <div class="exp-chip-grid">
+          <span class="exp-chip"><i class="fas fa-list-check"></i> Project Management</span>
+          <span class="exp-chip"><i class="fas fa-trowel-bricks"></i> Site Operations</span>
+          <span class="exp-chip"><i class="fas fa-gears"></i> Mechanical Systems</span>
+          <span class="exp-chip"><i class="fas fa-bolt"></i> Electrical Systems</span>
+          <span class="exp-chip"><i class="fas fa-city"></i> Construction Awareness</span>
+          <span class="exp-chip"><i class="fas fa-people-group"></i> Team Coordination</span>
+        </div>
       </div>
+    </section>
 
-      <div class="gallery-item">
-        <img src="tmg-intern/tmg-11.jpg" alt="TMG 11" />
-        
+    <!-- 06 NAVIGATION -->
+    <section class="exp-section">
+      <div class="exp-section-head reveal">
+        <span class="exp-section-num">06</span>
+        <div>
+          <h2 class="exp-section-title">Keep Exploring</h2>
+          <p class="exp-section-sub">Continue through the experiences.</p>
+        </div>
       </div>
-
-      <div class="gallery-item">
-        <img src="tmg-intern/tmg-12.jpg" alt="TMG 12" />
-        
+      <div class="exp-nav-grid">
+        <a href="honda-clinic-details.html" class="exp-nav-card reveal">
+          <span class="exp-nav-label"><i class="fas fa-arrow-left"></i> Previous Experience</span>
+          <span class="exp-nav-name">Honda Clinic <span class="nav-arrow"><i class="fas fa-arrow-left"></i></span></span>
+        </a>
+        <a href="index.html#experience" class="exp-nav-card exp-nav-center reveal" data-delay="1">
+          <span class="exp-nav-label"><i class="fas fa-th-large"></i> Back to Experiences</span>
+          <span class="exp-nav-name">All Experiences</span>
+        </a>
+        <div class="exp-nav-card exp-nav-muted reveal" data-delay="2">
+          <span class="exp-nav-label">Next Experience <i class="fas fa-arrow-right"></i></span>
+          <span class="exp-nav-name">EgyptAir &mdash; Coming Soon</span>
+        </div>
       </div>
+    </section>
 
-      <div class="gallery-item">
-        <img src="tmg-intern/tmg-13.jpg" alt="TMG 13" />
-        
-      </div>
+  </main>
 
-      <div class="gallery-item">
-        <img src="tmg-intern/tmg-14.jpg" alt="TMG 14" />
-        
-      </div>
+  <!-- ===== FOOTER ===== -->
+  <footer class="exp-footer">
+    <p>&copy; 2026 Ahmed Mohamed Sobhy Mostafa <span class="footer-dot">|</span> Mechatronics &amp; Robotics Engineer</p>
+  </footer>
 
-      <div class="gallery-item">
-        <img src="tmg-intern/tmg-15.jpg" alt="TMG 15" />
-        
-      </div>
-
-      <div class="gallery-item">
-        <img src="tmg-intern/tmg-16.jpg" alt="TMG 16" />
-        
-      </div>
-
-      <div class="gallery-item">
-        <img src="tmg-intern/tmg-17.jpg" alt="TMG 17" />
-        
-      </div>
-
-      <div class="gallery-item">
-        <img src="tmg-intern/tmg-18.jpg" alt="TMG 18" />
-        
-      </div>
-
-      <div class="gallery-item">
-        <img src="tmg-intern/tmg-19.jpg" alt="TMG 19" />
-        
-      </div>
-
-    </div>
-
-    <div style="text-align:center; margin: 20px 0 40px;">
-      <a href="index.html" style="display:inline-flex;align-items:center;gap:8px;color:var(--primary);font-weight:600;font-size:1.05rem;transition:color 0.3s;">
-        <i class="fas fa-arrow-left"></i> Back to Portfolio
-      </a>
-    </div>
-
-  </div>
-
-  <div class="footer">
-    <p>&copy; 2026 Ahmed Mohamed Sobhy Mostafa</p>
-  </div>
-
+  <script src="exp-main.js"></script>
 </body>
 </html>

@@ -3,308 +3,275 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KUKA SMART SYSTEMS - Ahmed Sobhy</title>
+  <title>KUKA Smart Systems | Industrial Robotics Intern - Ahmed Sobhy</title>
+  <meta name="description" content="Industrial Robotics Intern at KUKA Smart Systems - KUKA KSS 8.x operator and programming workshop covering robot control, motion programming, and automation systems." />
+  <link rel="icon" href="favicon.ico" sizes="48x48" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    :root {
-      --primary: #2563EB;
-      --primary-hover: #3B82F6;
-      --dark: #0B0F19;
-      --dark-card: #111827;
-      --dark-border: #1F2937;
-      --text: #F3F4F6;
-      --text-muted: #9CA3AF;
-    }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--dark);
-      color: var(--text);
-      min-height: 100vh;
-    }
-    .container { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
-    a { color: inherit; text-decoration: none; }
-
-    /* ===== HEADER ===== */
-    .header {
-      padding: 20px 0;
-      border-bottom: 1px solid var(--dark-border);
-    }
-    .header .container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .back-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      transition: color 0.3s;
-    }
-    .back-btn:hover { color: var(--primary); }
-    .header-title {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-    }
-
-    /* ===== HERO ===== */
-    .hero {
-      padding: 60px 0 40px;
-      text-align: center;
-    }
-    .hero h1 {
-      font-size: 2.5rem;
-      font-weight: 900;
-    }
-    @media (min-width: 768px) { .hero h1 { font-size: 3.5rem; } }
-    .hero .sub {
-      color: var(--primary);
-      font-size: 1.1rem;
-      margin-top: 8px;
-      font-weight: 500;
-    }
-    .hero .date {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      margin-top: 4px;
-    }
-
-    /* ===== INTRO ===== */
-    .intro {
-      background: var(--dark-card);
-      border: 1px solid var(--dark-border);
-      border-radius: 14px;
-      padding: 30px;
-      margin-bottom: 40px;
-      line-height: 1.9;
-      color: #D1D5DB;
-      font-size: 1rem;
-    }
-    .intro strong { color: white; }
-    .intro p + p { margin-top: 14px; }
-    .tags { margin-top: 14px; }
-    .tag {
-      display: inline-block;
-      background: rgba(37,99,235,0.1);
-      border: 1px solid rgba(37,99,235,0.3);
-      color: var(--primary);
-      padding: 5px 16px;
-      border-radius: 20px;
-      font-size: 0.85rem;
-      margin: 4px 4px 4px 0;
-    }
-
-    /* ===== ENTRY ===== */
-    .entry {
-      display: grid;
-      gap: 20px 40px;
-      margin-bottom: 40px;
-      align-items: start;
-    }
-    @media (min-width: 768px) {
-      .entry { grid-template-columns: 1fr 1fr; }
-      .entry.reverse .entry-img { order: 2; }
-      .entry.reverse .entry-text { order: 1; }
-    }
-    .entry-img img {
-      width: 100%;
-      border-radius: 12px;
-      border: 1px solid var(--dark-border);
-      transition: transform 0.3s;
-    }
-    .entry-img img:hover { transform: scale(1.02); }
-    .entry-text h3 {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: white;
-      margin-bottom: 10px;
-    }
-    .entry-text h3 i { color: var(--primary); margin-right: 8px; }
-    .entry-text p {
-      color: #D1D5DB;
-      line-height: 1.8;
-      font-size: 0.95rem;
-    }
-
-    /* ===== CERTIFICATE HIGHLIGHT ===== */
-    .cert-box {
-      background: linear-gradient(135deg, rgba(234,179,8,0.05), transparent);
-      border: 1px solid rgba(234,179,8,0.2);
-      border-radius: 14px;
-      padding: 24px;
-      margin-bottom: 40px;
-    }
-    @media (min-width: 768px) {
-      .cert-box { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: center; }
-    }
-    .cert-box img {
-      width: 100%;
-      border-radius: 10px;
-      border: 1px solid var(--dark-border);
-    }
-    .cert-box h3 {
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: white;
-      margin-bottom: 8px;
-    }
-    .cert-box h3 i { color: #EAB308; margin-right: 8px; }
-    .cert-box p {
-      color: #D1D5DB;
-      line-height: 1.8;
-      font-size: 0.95rem;
-    }
-
-    /* ===== FOOTER ===== */
-    .footer {
-      text-align: center;
-      padding: 30px 0;
-      border-top: 1px solid var(--dark-border);
-      color: var(--text-muted);
-      font-size: 0.85rem;
-      margin-top: 20px;
-    }
-  </style>
+  <link rel="stylesheet" href="exp-style.css" />
 </head>
 <body>
 
-  <!-- HEADER -->
-  <div class="header">
-    <div class="container">
-      <a href="Ahmed Sobhy Portofilo.html" class="back-btn">
-        <i class="fas fa-arrow-left"></i> Back to Portfolio
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="exp-navbar" id="expNavbar">
+    <div class="container exp-nav-inner">
+      <a href="index.html" class="exp-nav-logo">
+        <img src="as-logo.png" alt="AS" />
+        <span class="text">AHMED <span class="gradient-text">SOBHY</span></span>
       </a>
-      <span class="header-title">KUKA SMART SYSTEMS</span>
+      <a href="index.html#experience" class="exp-nav-back"><i class="fas fa-arrow-left"></i> Experiences</a>
     </div>
-  </div>
+  </nav>
 
-  <!-- HERO -->
-  <div class="hero">
-    <h1>KUKA <span style="background:linear-gradient(135deg,var(--primary),var(--primary-hover));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">SMART SYSTEMS</span></h1>
-    <div class="sub">Industrial Robotics Internship</div>
-    <div class="date">October 2025</div>
-  </div>
-
-  <div class="container">
-
-    <!-- INTRO -->
-    <div class="intro">
-      <p>
-        I recently attended a workshop on <strong>KUKA Robotics</strong> titled <strong>"KUKA KSS 8.x – Operator &amp; Programming"</strong>, held at <strong>SMART SYSTEMS (KUKA Official Partner)</strong>.
-      </p>
-      <p>
-        As a <strong>Mechatronics Engineering student passionate about robotics and automation</strong>, this workshop was a great opportunity to explore how industrial robots are programmed, operated, and integrated into real production systems.
-      </p>
-      <p>
-        I gained valuable hands-on experience in <strong>robot control, motion programming, and automation systems</strong>, which deepened my understanding of how robotics shapes the future of smart manufacturing.
-      </p>
-      <div class="tags">
-        <span class="tag">KUKA KSS 8.x</span>
-        <span class="tag">Robot Programming</span>
-        <span class="tag">Motion Programming</span>
-        <span class="tag">Robot Control</span>
-        <span class="tag">Automation Systems</span>
-        <span class="tag">Smart Manufacturing</span>
-        <span class="tag">Industrial Robotics</span>
-        <span class="tag">Industry 4.0</span>
-      </div>
-    </div>
-
-    <!-- IMAGE 2 + TEXT (reverse) -->
-    <div class="entry reverse">
-      <div class="entry-img">
-        <img src="kuka1.jpg" alt="KUKA Programming" />
-      </div>
-      <div class="entry-text">
-        <h3><i class="fas fa-cogs"></i> Robot Control &amp; Motion Programming</h3>
-        <p>
-          I gained valuable hands-on experience in robot control, motion programming, and automation systems. This deepened my understanding of how robotics shapes the future of smart manufacturing and Industry 4.0.
-        </p>
-      </div>
-    </div>
-
-    <!-- IMAGE 3 + TEXT -->
-    <div class="entry">
-      <div class="entry-img">
-        <img src="kuka2.jpg" alt="KUKA Hands-on" />
-      </div>
-      <div class="entry-text">
-        <h3><i class="fas fa-tools"></i> Hands-On with KUKA KSS 8.x</h3>
-        <p>
-          Working with the KUKA KSS 8.x system was eye-opening. I learned how to operate the Teach Pendant, write basic programs, and understand the logic behind industrial robot motion and control.
-        </p>
-      </div>
-    </div>
-
-    <!-- IMAGE 4 + TEXT (reverse) -->
-    <div class="entry reverse">
-      <div class="entry-img">
-        <img src="kuka3.jpg" alt="KUKA Workshop" />
-      </div>
-      <div class="entry-text">
-        <h3><i class="fas fa-project-diagram"></i> Real Production System Integration</h3>
-        <p>
-          Understanding how robots are integrated into real production lines was a key highlight. I saw firsthand how automation systems work together to create efficient smart manufacturing environments.
-        </p>
-      </div>
-    </div>
-
-    <!-- IMAGE 5 + TEXT -->
-    <div class="entry">
-      <div class="entry-img">
-        <img src="kuka4.jpg" alt="KUKA Experience" />
-      </div>
-      <div class="entry-text">
-        <h3><i class="fas fa-check-circle"></i> A Memorable Experience</h3>
-        <p>
-          This experience has motivated me even more to keep developing my skills in robotics, automation, and control systems. Truly grateful for this incredible learning journey.
-        </p>
-      </div>
-    </div>
-
-    <!-- CERTIFICATE -->
-    <div class="cert-box">
-      <div>
-        <img src="kuka.jpg" alt="KUKA Certificate" />
-      </div>
-      <div>
-        <h3><i class="fas fa-certificate"></i> Thank You</h3>
-        <p>
-          I'd like to express my sincere thanks to <strong>Smart Systems Training Academy</strong> and <strong>KUKA Robotics</strong> for this incredible experience.
-        </p>
-        <p style="margin-top:10px;">
-          This experience has motivated me even more to keep developing my skills in <strong>robotics, automation, and control systems</strong>.
-        </p>
-        <div class="tags" style="margin-top:14px;">
-          <span class="tag">#KUKA</span>
-          <span class="tag">#Robotics</span>
-          <span class="tag">#Automation</span>
-          <span class="tag">#Mechatronics</span>
-          <span class="tag">#Engineering</span>
-          <span class="tag">#SmartSystems</span>
-          <span class="tag">#Industry40</span>
+  <!-- ===== HERO ===== -->
+  <header class="exp-hero">
+    <div class="container">
+      <div class="exp-hero-inner">
+        <div class="exp-hero-logo"><img src="kuka-logo.png" alt="KUKA Smart Systems" /></div>
+        <div class="exp-hero-content">
+          <span class="exp-hero-kicker">Experience</span>
+          <h1 class="exp-hero-title">KUKA <span class="gradient-text">SMART SYSTEMS</span></h1>
+          <p class="exp-hero-role">Industrial Robotics Intern</p>
+          <div class="exp-hero-meta">
+            <span class="exp-meta-item"><i class="fas fa-briefcase"></i> KUKA Smart Systems</span>
+            <span class="exp-meta-item"><i class="fas fa-calendar-alt"></i> October 2025</span>
+            <span class="exp-meta-item"><i class="fas fa-map-marker-alt"></i> Egypt</span>
+          </div>
+          <p class="exp-hero-summary">
+            Attended the &ldquo;KUKA KSS 8.x &ndash; Operator &amp; Programming&rdquo; workshop at Smart Systems, KUKA's official training partner in Egypt. Gained hands-on experience in robot operation, motion programming, and automation.
+          </p>
         </div>
       </div>
     </div>
+  </header>
 
-    <!-- BACK BUTTON -->
-    <div style="text-align:center; margin: 20px 0 40px;">
-      <a href="Ahmed Sobhy Portofilo.html" style="display:inline-flex;align-items:center;gap:8px;color:var(--primary);font-weight:600;font-size:1.05rem;transition:color 0.3s;">
-        <i class="fas fa-arrow-left"></i> Back to Portfolio
-      </a>
-    </div>
+  <!-- ===== CONTENT ===== -->
+  <main class="container exp-main">
 
-  </div>
+    <!-- 01 OVERVIEW & ROLE -->
+    <section class="exp-section">
+      <div class="exp-section-head reveal">
+        <span class="exp-section-num">01</span>
+        <div>
+          <h2 class="exp-section-title">Overview &amp; Role</h2>
+          <p class="exp-section-sub">The company, the internship, and my responsibilities.</p>
+        </div>
+      </div>
+      <div class="exp-card reveal">
+        <div class="exp-combo">
+          <div class="exp-combo-col">
+            <h4 class="exp-mini-title"><i class="fas fa-circle-info"></i> Overview</h4>
+            <p>
+              KUKA is a global leader in industrial robots and automation. Smart Systems is KUKA's official training partner in Egypt.
+            </p>
+            <p>
+              The workshop taught how industrial robots are programmed, operated, and integrated into real production systems.
+            </p>
+          </div>
+          <div class="exp-combo-col">
+            <h4 class="exp-mini-title"><i class="fas fa-list-check"></i> My Role &amp; Responsibilities</h4>
+            <ul class="exp-bullet-list">
+              <li><span class="bl-ic"><i class="fas fa-check"></i></span> Operated the <strong>KUKA Teach Pendant</strong> (jogging and safety modes).</li>
+              <li><span class="bl-ic"><i class="fas fa-check"></i></span> Wrote and executed <strong>basic robot programs</strong> on KUKA KSS 8.x.</li>
+              <li><span class="bl-ic"><i class="fas fa-check"></i></span> Practiced <strong>motion programming</strong> and path control.</li>
+              <li><span class="bl-ic"><i class="fas fa-check"></i></span> Saw how robots <strong>integrate into production lines</strong> and smart manufacturing.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- FOOTER -->
-  <div class="footer">
-    <p>&copy; 2026 Ahmed Mohamed Sobhy Mostafa</p>
-  </div>
+    <!-- 02 TECHNICAL HIGHLIGHTS & TOOLS -->
+    <section class="exp-section">
+      <div class="exp-section-head reveal">
+        <span class="exp-section-num">02</span>
+        <div>
+          <h2 class="exp-section-title">Highlights &amp; Tools</h2>
+          <p class="exp-section-sub">Key areas covered and the technologies used.</p>
+        </div>
+      </div>
+      <div class="exp-card reveal">
+        <div class="exp-combo">
+          <div class="exp-combo-col">
+            <h4 class="exp-mini-title"><i class="fas fa-lightbulb"></i> Technical Highlights</h4>
+            <ul class="exp-highlight-list">
+              <li><span class="hl-ic"><i class="fas fa-robot"></i></span> <span><strong>KUKA KSS 8.x</strong> operating system and controller interface</span></li>
+              <li><span class="hl-ic"><i class="fas fa-hand-pointer"></i></span> <span><strong>Teach Pendant</strong> operation and manual robot jogging</span></li>
+              <li><span class="hl-ic"><i class="fas fa-route"></i></span> <span><strong>Motion programming</strong> and path definition</span></li>
+              <li><span class="hl-ic"><i class="fas fa-microchip"></i></span> <span><strong>Robot control</strong> and automation systems</span></li>
+              <li><span class="hl-ic"><i class="fas fa-industry"></i></span> <span><strong>Production system integration</strong> and workflow understanding</span></li>
+              <li><span class="hl-ic"><i class="fas fa-chart-line"></i></span> <span><strong>Smart Manufacturing &amp; Industry 4.0</strong> concepts</span></li>
+            </ul>
+          </div>
+          <div class="exp-combo-col">
+            <h4 class="exp-mini-title"><i class="fas fa-toolbox"></i> Technologies &amp; Tools Used</h4>
+            <div class="exp-chip-grid">
+              <span class="exp-chip"><i class="fas fa-robot"></i> KUKA KSS 8.x</span>
+              <span class="exp-chip"><i class="fas fa-keyboard"></i> Robot Programming</span>
+              <span class="exp-chip"><i class="fas fa-route"></i> Motion Programming</span>
+              <span class="exp-chip"><i class="fas fa-hand-pointer"></i> Teach Pendant</span>
+              <span class="exp-chip"><i class="fas fa-microchip"></i> Robot Control</span>
+              <span class="exp-chip"><i class="fas fa-industry"></i> Automation Systems</span>
+              <span class="exp-chip"><i class="fas fa-factory"></i> Industrial Robotics</span>
+              <span class="exp-chip"><i class="fas fa-chart-line"></i> Industry 4.0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- 03 CHALLENGES & IMPACT -->
+    <section class="exp-section">
+      <div class="exp-section-head reveal">
+        <span class="exp-section-num">03</span>
+        <div>
+          <h2 class="exp-section-title">Challenges &amp; Impact</h2>
+          <p class="exp-section-sub">Hurdles I faced and the results I delivered.</p>
+        </div>
+      </div>
+      <div class="exp-card reveal">
+        <div class="exp-combo">
+          <div class="exp-combo-col">
+            <h4 class="exp-mini-title"><i class="fas fa-triangle-exclamation"></i> Challenges &amp; Problem Solving</h4>
+            <ul class="exp-bullet-list">
+              <li><span class="bl-ic"><i class="fas fa-circle"></i></span> Understanding robot logic &mdash; coordinates, frames, and sequences.</li>
+              <li><span class="bl-ic"><i class="fas fa-circle"></i></span> Operating a full-size industrial robot safely.</li>
+              <li><span class="bl-ic"><i class="fas fa-circle"></i></span> Practicing on the Teach Pendant until the control logic became intuitive.</li>
+            </ul>
+          </div>
+          <div class="exp-combo-col">
+            <h4 class="exp-mini-title"><i class="fas fa-rocket"></i> Results &amp; Impact</h4>
+            <p>
+              By the end, I could operate the KUKA KSS 8.x system and write basic robot programs. The experience deepened my understanding of robotics in smart manufacturing.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 GALLERY -->
+    <section class="exp-section">
+      <div class="exp-section-head reveal">
+        <span class="exp-section-num">04</span>
+        <div>
+          <h2 class="exp-section-title">Gallery</h2>
+          <p class="exp-section-sub">Moments from the workshop.</p>
+        </div>
+      </div>
+      <div class="exp-gallery">
+        <figure class="exp-gallery-item" data-src="kuka1.jpg">
+          <img src="kuka1.jpg" alt="Image 01" loading="lazy" />
+          <figcaption class="exp-gallery-label">Image 01</figcaption>
+          <span class="exp-gallery-zoom"><i class="fas fa-expand"></i></span>
+        </figure>
+        <figure class="exp-gallery-item" data-src="kuka2.jpg">
+          <img src="kuka2.jpg" alt="Image 02" loading="lazy" />
+          <figcaption class="exp-gallery-label">Image 02</figcaption>
+          <span class="exp-gallery-zoom"><i class="fas fa-expand"></i></span>
+        </figure>
+        <figure class="exp-gallery-item" data-src="kuka3.jpg">
+          <img src="kuka3.jpg" alt="Image 03" loading="lazy" />
+          <figcaption class="exp-gallery-label">Image 03</figcaption>
+          <span class="exp-gallery-zoom"><i class="fas fa-expand"></i></span>
+        </figure>
+        <figure class="exp-gallery-item" data-src="kuka4.jpg">
+          <img src="kuka4.jpg" alt="Image 04" loading="lazy" />
+          <figcaption class="exp-gallery-label">Image 04</figcaption>
+          <span class="exp-gallery-zoom"><i class="fas fa-expand"></i></span>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 05 CERTIFICATIONS -->
+    <section class="exp-section">
+      <div class="exp-section-head reveal">
+        <span class="exp-section-num">05</span>
+        <div>
+          <h2 class="exp-section-title">Certifications</h2>
+          <p class="exp-section-sub">Certificates earned during the experience.</p>
+        </div>
+      </div>
+      <div class="exp-cert-grid">
+        <div class="exp-cert-card reveal">
+          <div class="exp-cert-preview" data-src="kuka.jpg">
+            <img src="kuka.jpg" alt="Certification 01" loading="lazy" />
+            <span class="cert-zoom-hint"><i class="fas fa-search-plus"></i></span>
+          </div>
+          <div class="exp-cert-body">
+            <div class="exp-cert-name">
+              <span class="cert-ic"><i class="fas fa-certificate"></i></span>
+              <div>
+                <h3>Certification 01</h3>
+                <span>KUKA Robotics</span>
+              </div>
+            </div>
+            <div class="exp-cert-actions">
+              <button class="btn btn-primary" type="button" onclick="this.closest('.exp-cert-card').querySelector('.exp-cert-preview').click();"><i class="fas fa-eye"></i> Preview</button>
+              <a class="btn btn-ghost" href="kuka.jpg" download><i class="fas fa-download"></i> Download</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 SKILLS GAINED -->
+    <section class="exp-section">
+      <div class="exp-section-head reveal">
+        <span class="exp-section-num">06</span>
+        <div>
+          <h2 class="exp-section-title">Skills Gained</h2>
+          <p class="exp-section-sub">Skills I developed through this experience.</p>
+        </div>
+      </div>
+      <div class="exp-card reveal">
+        <div class="exp-chip-grid">
+          <span class="exp-chip"><i class="fas fa-robot"></i> Robotics</span>
+          <span class="exp-chip"><i class="fas fa-keyboard"></i> Robot Programming</span>
+          <span class="exp-chip"><i class="fas fa-route"></i> Motion Control</span>
+          <span class="exp-chip"><i class="fas fa-microchip"></i> Automation Systems</span>
+          <span class="exp-chip"><i class="fas fa-factory"></i> Smart Manufacturing</span>
+          <span class="exp-chip"><i class="fas fa-user-gear"></i> Mechatronics</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 NAVIGATION -->
+    <section class="exp-section">
+      <div class="exp-section-head reveal">
+        <span class="exp-section-num">07</span>
+        <div>
+          <h2 class="exp-section-title">Keep Exploring</h2>
+          <p class="exp-section-sub">Continue through the experiences.</p>
+        </div>
+      </div>
+      <div class="exp-nav-grid">
+        <div class="exp-nav-card exp-nav-muted reveal">
+          <span class="exp-nav-label"><i class="fas fa-arrow-left"></i> Previous Experience</span>
+          <span class="exp-nav-name">Start of the Journey</span>
+        </div>
+        <a href="index.html#experience" class="exp-nav-card exp-nav-center reveal" data-delay="1">
+          <span class="exp-nav-label"><i class="fas fa-th-large"></i> Back to Experiences</span>
+          <span class="exp-nav-name">All Experiences</span>
+        </a>
+        <a href="elsewedy-details.html" class="exp-nav-card reveal" data-delay="2">
+          <span class="exp-nav-label">Next Experience <i class="fas fa-arrow-right"></i></span>
+          <span class="exp-nav-name">Elsewedy Industries <span class="nav-arrow"><i class="fas fa-arrow-right"></i></span></span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="exp-footer">
+    <p>&copy; 2026 Ahmed Mohamed Sobhy Mostafa <span class="footer-dot">|</span> Mechatronics &amp; Robotics Engineer</p>
+  </footer>
+
+  <script src="exp-main.js"></script>
 </body>
 </html>
