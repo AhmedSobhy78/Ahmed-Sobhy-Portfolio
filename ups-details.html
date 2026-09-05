@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UPS System with Custom-Built Inverter | Project - Ahmed Sobhy</title>
+  <meta name="description" content="Uninterruptible Power Supply (UPS) system with a custom-built inverter - Arduino Nano, IRFZ44N MOSFETs, 2N2222 transistors, relay switching, and Proteus simulation. Power electronics and embedded systems project." />
+  <link rel="icon" href="favicon.ico" sizes="48x48" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="exp-style.css" />
+</head>
+<body>
+
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="exp-navbar" id="expNavbar">
+    <div class="container exp-nav-inner">
+      <a href="index.html" class="exp-nav-logo">
+        <img src="as-logo.png" alt="AS" />
+        <span class="text">AHMED <span class="gradient-text">SOBHY</span></span>
+      </a>
+      <a href="index.html#projects" class="exp-nav-back"><i class="fas fa-arrow-left"></i> Projects</a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <header class="exp-hero">
+    <div class="container">
+      <div class="exp-hero-inner">
+        <div class="exp-hero-logo" style="background:linear-gradient(135deg,rgba(37,99,235,0.12),rgba(37,99,235,0.04));display:flex;align-items:center;justify-content:center;">
+          <i class="fas fa-bolt" style="font-size:3rem;color:var(--primary-hover);"></i>
+        </div>
+        <div class="exp-hero-content">
+          <span class="exp-hero-kicker">Engineering Project</span>
+          <h1 class="exp-hero-title">UPS <span class="gradient-text">SYSTEM</span></h1>
+          <p class="exp-hero-role">Uninterruptible Power Supply with Custom-Built Inverter</p>
+          <div class="exp-hero-meta">
+            <span class="exp-meta-item"><i class="fas fa-project-diagram"></i> Personal Project</span>
+            <span class="exp-meta-item"><i class="fas fa-calendar-alt"></i> 2026</span>
+            <span class="exp-meta-item"><i class="fas fa-microchip"></i> Electrical &amp; Embedded Systems</span>
+          </div>
+          <p class="exp-hero-summary">
+            Designed and developed a UPS system with a transformer-based inverter stage built from scratch &mdash; controlled by an Arduino Nano with MOSFET-based switching, relay power routing, and voltage regulation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== CONTENT ===== -->
+  <main class="container exp-main">
+
+    <!-- 01 OVERVIEW -->
+    <section class="exp-section">
+      <div class="exp-section-head reveal">
+        <span class="exp-section-num">01</span>
+        <div>
+          <h2 class="exp-section-title">Overview</h2>
+          <p class="exp-section-sub">What the project is and the problem it solves.</p>
+        </div>
+      </div>
+      <div class="exp-card reveal">
+        <p>
+          This project is a <strong>prototype UPS (Uninterruptible Power Supply)</strong> system that keeps a load powered when the main supply is interrupted. The goal was simple: maintain power during outages while understanding the principles that make UPS systems reliable in real-world applications.
+        </p>
+        <p>
+          The core of the project is a <strong>custom-built inverter designed and implemented from scratch</strong> rather than using a ready-made inverter module. The system converts DC battery power into AC for the load, with an <strong>Arduino Nano</strong> acting as the control brain and <strong>IRFZ44N MOSFETs</strong> handling power switching.
+        </p>
+        <p>
+          The inverter stage uses a <strong>transformer</strong> for voltage conversion, with <strong>2N2222 transistors</strong> driving the switching signal, a <strong>relay switching circuit</strong> for routing between mains and battery power, and <strong>voltage regulation and power management components</strong> to keep the output stable.
+        </p>
+      </div>
+    </section>
+
+    <!-- 02 TECHNICAL HIGHLIGHTS & TOOLS -->
+    <section class="exp-section">
+      <div class="exp-section-head reveal">
+        <span class="exp-section-num">02</span>
+        <div>
+          <h2 class="exp-section-title">Highlights &amp; Tools</h2>
+          <p class="exp-section-sub">Key areas covered and the components used.</p>
+        </div>
+      </div>
+      <div class="exp-card reveal">
+        <div class="exp-combo">
+          <div class="exp-combo-col">
+            <h4 class="exp-mini-title"><i class="fas fa-lightbulb"></i> Technical Highlights</h4>
+            <ul class="exp-highlight-list">
+              <li><span class="hl-ic"><i class="fas fa-microchip"></i></span> <span><strong>Custom inverter stage</strong> designed and built from scratch</span></li>
+              <li><span class="hl-ic"><i class="fas fa-gears"></i></span> <span><strong>MOSFET-based switching</strong> with IRFZ44N power MOSFETs</span></li>
+              <li><span class="hl-ic"><i class="fas fa-plug-circle-bolt"></i></span> <span><strong>Transformer-based voltage conversion</strong> for AC output</span></li>
+              <li><span class="hl-ic"><i class="fas fa-right-left"></i></span> <span><strong>Relay switching</strong> between mains and backup power</span></li>
+              <li><span class="hl-ic"><i class="fas fa-gauge-high"></i></span> <span><strong>Voltage regulation</strong> and power management</span></li>
+              <li><span class="hl-ic"><i class="fas fa-desktop"></i></span> <span><strong>Simulation and testing</strong> in Proteus before hardware build</span></li>
+            </ul>
+          </div>
+          <div class="exp-combo-col">
+            <h4 class="exp-mini-title"><i class="fas fa-toolbox"></i> Components &amp; Tools</h4>
+            <div class="exp-chip-grid">
+              <span class="exp-chip"><i class="fas fa-microchip"></i> Arduino Nano</span>
+              <span class="exp-chip"><i class="fas fa-bolt"></i> IRFZ44N MOSFETs</span>
+              <span class="exp-chip"><i class="fas fa-circle-nodes"></i> 2N2222 Transistors</span>
+              <span class="exp-chip"><i class="fas fa-coil"></i> Transformer</span>
+              <span class="exp-chip"><i class="fas fa-right-left"></i> Relay</span>
+              <span class="exp-chip"><i class="fas fa-gauge-high"></i> Voltage Regulation</span>
+              <span class="exp-chip"><i class="fas fa-desktop"></i> Proteus</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 KEY FEATURES -->
+    <section class="exp-section">
+      <div class="exp-section-head reveal">
+        <span class="exp-section-num">03</span>
+        <div>
+          <h2 class="exp-section-title">Key Features</h2>
+          <p class="exp-section-sub">What makes the project work.</p>
+        </div>
+      </div>
+      <div class="exp-card reveal">
+        <div class="exp-combo">
+          <div class="exp-combo-col">
+            <h4 class="exp-mini-title"><i class="fas fa-list-check"></i> Design &amp; Build</h4>
+            <ul class="exp-bullet-list">
+              <li><span class="bl-ic"><i class="fas fa-check"></i></span> <strong>Custom inverter</strong> designed and implemented instead of a ready-made module.</li>
+              <li><span class="bl-ic"><i class="fas fa-check"></i></span> <strong>MOSFET switching</strong> using IRFZ44N power transistors for the inverter stage.</li>
+              <li><span class="bl-ic"><i class="fas fa-check"></i></span> <strong>Transformer-based inverter stage</strong> for voltage conversion.</li>
+              <li><span class="bl-ic"><i class="fas fa-check"></i></span> <strong>Relay switching circuit</strong> to switch between mains and battery power.</li>
+            </ul>
+          </div>
+          <div class="exp-combo-col">
+            <h4 class="exp-mini-title"><i class="fas fa-flask"></i> Control &amp; Testing</h4>
+            <ul class="exp-bullet-list">
+              <li><span class="bl-ic"><i class="fas fa-check"></i></span> <strong>Embedded control</strong> with an Arduino Nano driving the system.</li>
+              <li><span class="bl-ic"><i class="fas fa-check"></i></span> <strong>Voltage regulation</strong> and power management components for stable output.</li>
+              <li><span class="bl-ic"><i class="fas fa-check"></i></span> <strong>Proteus simulation</strong> from the start of the design process.</li>
+              <li><span class="bl-ic"><i class="fas fa-check"></i></span> <strong>Hardware assembly and testing</strong> after validating the design in simulation.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 GALLERY -->
+    <section class="exp-section">
+      <div class="exp-section-head reveal">
+        <span class="exp-section-num">04</span>
+        <div>
+          <h2 class="exp-section-title">Gallery</h2>
+          <p class="exp-section-sub">Photos from the project build and simulation.</p>
+        </div>
+      </div>
+      <div class="exp-gallery">
+        <figure class="exp-gallery-item" data-src="ups-project/ups-01.jpeg">
+          <img src="ups-project/ups-01.jpeg" alt="UPS Project - Photo 01" loading="lazy" />
+          <figcaption class="exp-gallery-label">Project Photo 01</figcaption>
+          <span class="exp-gallery-zoom"><i class="fas fa-expand"></i></span>
+        </figure>
+        <figure class="exp-gallery-item" data-src="ups-project/ups-02.jpeg">
+          <img src="ups-project/ups-02.jpeg" alt="UPS Project - Photo 02" loading="lazy" />
+          <figcaption class="exp-gallery-label">Project Photo 02</figcaption>
+          <span class="exp-gallery-zoom"><i class="fas fa-expand"></i></span>
+        </figure>
+        <figure class="exp-gallery-item" data-src="ups-project/ups-03.jpeg">
+          <img src="ups-project/ups-03.jpeg" alt="UPS Project - Photo 03" loading="lazy" />
+          <figcaption class="exp-gallery-label">Project Photo 03</figcaption>
+          <span class="exp-gallery-zoom"><i class="fas fa-expand"></i></span>
+        </figure>
+        <figure class="exp-gallery-item" data-src="ups-project/ups-04.jpeg">
+          <img src="ups-project/ups-04.jpeg" alt="UPS Project - Photo 04" loading="lazy" />
+          <figcaption class="exp-gallery-label">Project Photo 04</figcaption>
+          <span class="exp-gallery-zoom"><i class="fas fa-expand"></i></span>
+        </figure>
+        <figure class="exp-gallery-item" data-src="ups-project/ups-05.jpeg">
+          <img src="ups-project/ups-05.jpeg" alt="UPS Project - Photo 05" loading="lazy" />
+          <figcaption class="exp-gallery-label">Project Photo 05</figcaption>
+          <span class="exp-gallery-zoom"><i class="fas fa-expand"></i></span>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 05 PROJECT REPORT -->
+    <section class="exp-section">
+      <div class="exp-section-head reveal">
+        <span class="exp-section-num">05</span>
+        <div>
+          <h2 class="exp-section-title">Project Report</h2>
+          <p class="exp-section-sub">The full project documentation.</p>
+        </div>
+      </div>
+      <div class="exp-card reveal" style="display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;">
+        <div class="exp-cert-name">
+          <span class="cert-ic"><i class="fas fa-file-pdf"></i></span>
+          <div>
+            <h3 style="font-size:0.98rem;font-weight:700;color:white;">UPS Project Report (PDF)</h3>
+            <span style="font-size:0.76rem;color:var(--text-muted);">Design, simulation, and implementation documentation.</span>
+          </div>
+        </div>
+        <div class="exp-cert-actions">
+          <a class="btn btn-primary" href="ups-project/ups-report.pdf" target="_blank" rel="noopener"><i class="fas fa-eye"></i> View</a>
+          <a class="btn btn-ghost" href="ups-project/ups-report.pdf" download><i class="fas fa-download"></i> Download</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 SKILLS GAINED -->
+    <section class="exp-section">
+      <div class="exp-section-head reveal">
+        <span class="exp-section-num">06</span>
+        <div>
+          <h2 class="exp-section-title">Skills Gained</h2>
+          <p class="exp-section-sub">Hands-on experience from the project.</p>
+        </div>
+      </div>
+      <div class="exp-card reveal">
+        <div class="exp-chip-grid">
+          <span class="exp-chip"><i class="fas fa-bolt"></i> Power Electronics</span>
+          <span class="exp-chip"><i class="fas fa-microchip"></i> Embedded Systems</span>
+          <span class="exp-chip"><i class="fas fa-diagram-project"></i> Circuit Design</span>
+          <span class="exp-chip"><i class="fas fa-desktop"></i> Simulation</span>
+          <span class="exp-chip"><i class="fas fa-tools"></i> Hardware Testing</span>
+          <span class="exp-chip"><i class="fas fa-user-gear"></i> Troubleshooting</span>
+          <span class="exp-chip"><i class="fas fa-cubes"></i> System Integration</span>
+          <span class="exp-chip"><i class="fas fa-users"></i> Teamwork</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 NAVIGATION -->
+    <section class="exp-section">
+      <div class="exp-section-head reveal">
+        <span class="exp-section-num">07</span>
+        <div>
+          <h2 class="exp-section-title">Keep Exploring</h2>
+          <p class="exp-section-sub">Continue through the portfolio.</p>
+        </div>
+      </div>
+      <div class="exp-nav-grid">
+        <a href="rcboat-details.html" class="exp-nav-card reveal">
+          <span class="exp-nav-label"><i class="fas fa-arrow-left"></i> Previous Project</span>
+          <span class="exp-nav-name">RC Boat <span class="nav-arrow"><i class="fas fa-arrow-left"></i></span></span>
+        </a>
+        <a href="index.html#projects" class="exp-nav-card exp-nav-center reveal" data-delay="0.1">
+          <span class="exp-nav-label"><i class="fas fa-th-large"></i> Back to Projects</span>
+          <span class="exp-nav-name">All Projects</span>
+        </a>
+        <a href="digital-clock-details.html" class="exp-nav-card reveal" data-delay="0.2">
+          <span class="exp-nav-label">Next Project <i class="fas fa-arrow-right"></i></span>
+          <span class="exp-nav-name">Digital Clock <span class="nav-arrow"><i class="fas fa-arrow-right"></i></span></span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="exp-footer">
+    <p>&copy; 2026 Ahmed Mohamed Sobhy Mostafa <span class="footer-dot">|</span> Mechatronics &amp; Robotics Engineer</p>
+  </footer>
+
+  <script src="exp-main.js"></script>
+</body>
+</html>
