@@ -46,7 +46,7 @@
     root.appendChild(style);
   }
 
-  /* --- Always call so exp-style loaded pages keep the same 07 numbering. --- */
+  /* --- Locate the current project in the shared PROJECTS order. --- */
   function currentIndex() {
     var page = window.location.pathname.split('/').pop() || '';
     for (var i = 0; i < PROJECTS.length; i++) {
@@ -82,10 +82,19 @@
     var prev = idx > 0 ? PROJECTS[idx - 1] : null;
     var next = idx < PROJECTS.length - 1 ? PROJECTS[idx + 1] : null;
 
+    // section number = count of preceding .exp-section siblings + 1
+    var num = 1;
+    var sib = root.previousSibling;
+    while (sib) {
+      if (sib.nodeType === 1 && sib.classList && sib.classList.contains('exp-section')) num++;
+      sib = sib.previousSibling;
+    }
+    var numStr = (num < 10 ? '0' : '') + num;
+
     root.innerHTML =
       '<section class="exp-section">' +
       '  <div class="exp-section-head reveal">' +
-      '    <span class="exp-section-num">07</span>' +
+      '    <span class="exp-section-num">' + numStr + '</span>' +
       '    <div>' +
       '      <h2 class="exp-section-title">Keep Exploring</h2>' +
       '      <p class="exp-section-sub">Continue through the projects.</p>' +

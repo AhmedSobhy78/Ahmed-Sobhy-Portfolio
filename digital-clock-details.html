@@ -3,210 +3,214 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Digital Clock - Ahmed Sobhy</title>
+  <title>Digital Clock Project - Ahmed Sobhy</title>
+  <meta name="description" content="Digital Clock project built with an ATmega32 microcontroller and 7-segment displays, including simulation and a full project report." />
+  <link rel="icon" href="favicon.ico" sizes="48x48" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    :root {
-      --primary: #2563EB;
-      --primary-hover: #1D4ED8;
-      --dark: #0B0F19;
-      --dark-card: #111827;
-      --dark-border: #1F2937;
-      --text: #F3F4F6;
-      --text-muted: #9CA3AF;
-    }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--dark);
-      color: var(--text);
-      min-height: 100vh;
-    }
-    .container { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
-    a { color: inherit; text-decoration: none; }
-
-    .header {
-      padding: 20px 0;
-      border-bottom: 1px solid var(--dark-border);
-    }
-    .header .container { display: flex; align-items: center; justify-content: space-between; }
-    .back-btn { display: inline-flex; align-items: center; gap: 8px; color: var(--text-muted); font-size: 0.9rem; transition: color 0.3s; }
-    .back-btn:hover { color: var(--primary); }
-    .header-title { font-size: 0.9rem; color: var(--text-muted); }
-
-    .hero {
-      padding: 60px 0 40px;
-      text-align: center;
-    }
-    .hero h1 { font-size: 2.5rem; font-weight: 900; }
-    @media (min-width: 768px) { .hero h1 { font-size: 3rem; } }
-    .hero .sub { color: var(--primary); font-size: 1.1rem; margin-top: 8px; font-weight: 500; }
-    .hero .date { color: var(--text-muted); font-size: 0.9rem; margin-top: 4px; }
-
-    .intro {
-      background: var(--dark-card);
-      border: 1px solid var(--dark-border);
-      border-radius: 14px;
-      padding: 30px;
-      margin-bottom: 40px;
-      line-height: 1.9;
-      color: #D1D5DB;
-      font-size: 1rem;
-    }
-    .intro strong { color: white; }
-    .intro p + p { margin-top: 14px; }
-    .tags { margin-top: 14px; }
-    .tag {
-      display: inline-block;
-      background: rgba(37,99,235,0.1);
-      border: 1px solid rgba(37,99,235,0.3);
-      color: var(--primary);
-      padding: 5px 16px;
-      border-radius: 20px;
-      font-size: 0.85rem;
-      margin: 4px 4px 4px 0;
-    }
-
-    .entry {
-      display: grid;
-      gap: 20px 40px;
-      margin-bottom: 40px;
-      align-items: start;
-    }
-    @media (min-width: 768px) {
-      .entry { grid-template-columns: 1fr 1fr; }
-      .entry.reverse .entry-img { order: 2; }
-      .entry.reverse .entry-text { order: 1; }
-    }
-    .entry-img img {
-      width: 100%;
-      border-radius: 12px;
-      border: 1px solid var(--dark-border);
-      transition: transform 0.3s;
-    }
-    .entry-img img:hover { transform: scale(1.02); }
-    .entry-text h3 { font-size: 1.1rem; font-weight: 700; color: white; margin-bottom: 10px; }
-    .entry-text h3 i { color: var(--primary); margin-right: 8px; }
-    .entry-text p { color: #D1D5DB; line-height: 1.8; font-size: 0.95rem; }
-
-    .report-box {
-      background: linear-gradient(135deg, rgba(37,99,235,0.05), transparent);
-      border: 1px solid rgba(37,99,235,0.2);
-      border-radius: 14px;
-      padding: 30px;
-      margin-bottom: 40px;
-      text-align: center;
-    }
-    .report-box h3 { font-size: 1.2rem; font-weight: 700; color: white; margin-bottom: 8px; }
-    .report-box h3 i { color: var(--primary); margin-right: 8px; }
-    .report-box p { color: #D1D5DB; line-height: 1.8; font-size: 0.95rem; margin-bottom: 16px; }
-    .report-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--primary);
-      color: white;
-      padding: 12px 28px;
-      border-radius: 10px;
-      font-weight: 600;
-      font-size: 1rem;
-      transition: background 0.3s;
-    }
-    .report-btn:hover { background: var(--primary-hover); }
-
-    .footer {
-      text-align: center;
-      padding: 30px 0;
-      border-top: 1px solid var(--dark-border);
-      color: var(--text-muted);
-      font-size: 0.85rem;
-      margin-top: 20px;
-    }
-  </style>
+  <link rel="stylesheet" href="exp-style.css" />
 </head>
 <body>
 
-  <div class="header">
-    <div class="container">
-      <a href="index.html" class="back-btn">
-        <i class="fas fa-arrow-left"></i> Back to Portfolio
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="exp-navbar" id="expNavbar">
+    <div class="container exp-nav-inner">
+      <a href="index.html" class="exp-nav-logo">
+        <img src="as-logo.png" alt="AS" />
+        <span class="text">AHMED <span class="gradient-text">SOBHY</span></span>
       </a>
-      <span class="header-title">DIGITAL CLOCK</span>
+      <a href="index.html#projects" class="exp-nav-back"><i class="fas fa-arrow-left"></i> Projects</a>
     </div>
-  </div>
+  </nav>
 
-  <div class="hero">
-    <h1>DIGITAL <span style="background:linear-gradient(135deg,var(--primary),var(--primary-hover));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">CLOCK</span></h1>
-    <div class="sub">ATmega32 &amp; 7-Segment Display Project</div>
-    <div class="date">University Project</div>
-  </div>
-
-  <div class="container">
-
-    <div class="intro">
-      <p>
-        A <strong>digital clock system</strong> built using an <strong>ATmega32 microcontroller</strong> with <strong>six 7-segment displays</strong> (two for hours, two for minutes, two for seconds). The system tracks real time with accurate second-by-second updates and supports features like <strong>pause, reset, and time adjustment</strong> using push buttons.
-      </p>
-      <p>
-        Designed and simulated in <strong>Proteus</strong>, the project demonstrates embedded systems concepts including timer/counter interfacing, multiplexed display control, and button debouncing.
-      </p>
-      <div class="tags">
-        <span class="tag">ATmega32</span>
-        <span class="tag">7-Segment Display</span>
-        <span class="tag">Proteus</span>
-        <span class="tag">Embedded C</span>
-        <span class="tag">Multiplexing</span>
-        <span class="tag">Timer/Interrupts</span>
-        <span class="tag">Microcontroller</span>
+  <!-- ===== HERO ===== -->
+  <header class="exp-hero">
+    <div class="container">
+      <div class="exp-hero-inner">
+        <div class="exp-hero-logo" style="background:linear-gradient(135deg,rgba(37,99,235,0.12),rgba(37,99,235,0.04));display:flex;align-items:center;justify-content:center;">
+          <i class="fas fa-clock" style="font-size:3rem;color:var(--primary-hover);"></i>
+        </div>
+        <div class="exp-hero-content">
+          <span class="exp-hero-kicker">University Project</span>
+          <h1 class="exp-hero-title">Digital <span class="gradient-text">CLOCK</span></h1>
+          <p class="exp-hero-role">ATmega32 &amp; 7-Segment Display Project</p>
+          <div class="exp-hero-meta">
+            <span class="exp-meta-item"><i class="fas fa-project-diagram"></i> Embedded Systems</span>
+            <span class="exp-meta-item"><i class="fas fa-microchip"></i> ATmega32</span>
+            <span class="exp-meta-item"><i class="fas fa-desktop"></i> Proteus Simulation</span>
+          </div>
+          <p class="exp-hero-summary">
+            A digital clock that displays the time using six 7-segment displays, driven by an ATmega32 microcontroller with pause, reset, and time-adjustment functions.
+          </p>
+        </div>
       </div>
     </div>
+  </header>
 
-    <!-- Image -->
-    <div class="entry">
-      <div class="entry-img">
-        <img src="digital-clock.jpeg" alt="Digital Clock Proteus Simulation" />
+  <!-- ===== CONTENT ===== -->
+  <main class="container exp-main">
+
+    <!-- 01 OVERVIEW -->
+    <section class="exp-section">
+      <div class="exp-section-head reveal">
+        <span class="exp-section-num">01</span>
+        <div>
+          <h2 class="exp-section-title">Overview</h2>
+          <p class="exp-section-sub">What the project is and what it does.</p>
+        </div>
       </div>
-      <div class="entry-text">
-        <h3><i class="fas fa-microchip"></i> Proteus Simulation</h3>
+      <div class="exp-card reveal">
         <p>
-          The complete circuit designed in Proteus showing the ATmega32 connected to six 7-segment displays via multiplexed control, with push buttons for pause, reset, and time adjustment.
+          This project is a <strong>digital clock</strong> built entirely in Proteus, displaying hours and minutes across <strong>six 7-segment displays</strong> and controlled by an <strong>ATmega32 microcontroller</strong> using Embedded C.
+        </p>
+        <p>
+          The clock counts time in real time and supports <strong>pause</strong>, <strong>reset</strong>, and <strong>time adjustment</strong>, demonstrated through a full simulation with the complete circuit and code.
         </p>
       </div>
-    </div>
+    </section>
 
-    <!-- VIDEO -->
-    <div style="background:var(--dark-card);border:1px solid var(--dark-border);border-radius:14px;padding:24px;margin-bottom:40px;text-align:center;">
-      <h3 style="font-size:1.1rem;font-weight:700;color:white;margin-bottom:12px;"><i class="fas fa-video" style="color:var(--primary);margin-right:8px;"></i> Project Video</h3>
-      <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:10px;">
-        <iframe src="https://drive.google.com/file/d/1DNbLYx_ayaaEHYVFZDmZ1iWl7o4TyNm8/preview?hl=en" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;" allow="autoplay" allowfullscreen></iframe>
+    <!-- 02 TECHNICAL HIGHLIGHTS & TOOLS -->
+    <section class="exp-section">
+      <div class="exp-section-head reveal">
+        <span class="exp-section-num">02</span>
+        <div>
+          <h2 class="exp-section-title">Highlights &amp; Tools</h2>
+          <p class="exp-section-sub">Key areas covered and the components used.</p>
+        </div>
       </div>
-    </div>
+      <div class="exp-card reveal">
+        <div class="exp-combo">
+          <div class="exp-combo-col">
+            <h4 class="exp-mini-title"><i class="fas fa-lightbulb"></i> Technical Highlights</h4>
+            <ul class="exp-highlight-list">
+              <li><span class="hl-ic"><i class="fas fa-microchip"></i></span> <span><strong>ATmega32 microcontroller</strong> running the clock logic</span></li>
+              <li><span class="hl-ic"><i class="fas fa-display"></i></span> <span><strong>Six 7-segment displays</strong> showing HH:MM</span></li>
+              <li><span class="hl-ic"><i class="fas fa-multiply"></i></span> <span><strong>Multiplexing</strong> of the display segments</span></li>
+              <li><span class="hl-ic"><i class="fas fa-play-pause"></i></span> <span><strong>Pause, reset, and time adjustment</strong> controls</span></li>
+              <li><span class="hl-ic"><i class="fas fa-timer"></i></span> <span><strong>Timers and interrupts</strong> for accurate counting</span></li>
+            </ul>
+          </div>
+          <div class="exp-combo-col">
+            <h4 class="exp-mini-title"><i class="fas fa-toolbox"></i> Technologies &amp; Tools</h4>
+            <div class="exp-chip-grid">
+              <span class="exp-chip"><i class="fas fa-microchip"></i> ATmega32</span>
+              <span class="exp-chip"><i class="fas fa-display"></i> 7-Segment Display</span>
+              <span class="exp-chip"><i class="fas fa-flask"></i> Proteus</span>
+              <span class="exp-chip"><i class="fas fa-code"></i> Embedded C</span>
+              <span class="exp-chip"><i class="fas fa-multiply"></i> Multiplexing</span>
+              <span class="exp-chip"><i class="fas fa-timer"></i> Timers &amp; Interrupts</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- Report -->
-    <div class="report-box">
-      <h3><i class="fas fa-file-pdf"></i> Project Report</h3>
-      <p>
-        Download the full project report covering the circuit design, code explanation, simulation results, and conclusion.
-      </p>
-      <a href="Digital Clock Report.pdf" target="_blank" class="report-btn">
-        <i class="fas fa-download"></i> Download Report
-      </a>
-    </div>
+    <!-- 03 KEY FEATURES -->
+    <section class="exp-section">
+      <div class="exp-section-head reveal">
+        <span class="exp-section-num">03</span>
+        <div>
+          <h2 class="exp-section-title">Key Features</h2>
+          <p class="exp-section-sub">What makes the project work.</p>
+        </div>
+      </div>
+      <div class="exp-card reveal">
+        <div class="exp-combo">
+          <div class="exp-combo-col">
+            <h4 class="exp-mini-title"><i class="fas fa-list-check"></i> Functionality</h4>
+            <ul class="exp-bullet-list">
+              <li><span class="bl-ic"><i class="fas fa-check"></i></span> Real-time <strong>HH:MM display</strong> across six 7-segment displays.</li>
+              <li><span class="bl-ic"><i class="fas fa-check"></i></span> <strong>Pause</strong> and <strong>reset</strong> of the running clock.</li>
+              <li><span class="bl-ic"><i class="fas fa-check"></i></span> <strong>Time adjustment</strong> to set hours and minutes.</li>
+              <li><span class="bl-ic"><i class="fas fa-check"></i></span> <strong>Multiplexed display</strong> to drive six segments efficiently.</li>
+            </ul>
+          </div>
+          <div class="exp-combo-col">
+            <h4 class="exp-mini-title"><i class="fas fa-flask"></i> Simulation</h4>
+            <ul class="exp-bullet-list">
+              <li><span class="bl-ic"><i class="fas fa-check"></i></span> Fully simulated circuit in <strong>Proteus</strong>.</li>
+              <li><span class="bl-ic"><i class="fas fa-check"></i></span> Written in <strong>Embedded C</strong> and tested with the microcontroller.</li>
+              <li><span class="bl-ic"><i class="fas fa-check"></i></span> <strong>Timers and interrupts</strong> used for timekeeping.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <div id="project-nav" style="margin: 40px 0;">
+    <!-- 04 GALLERY -->
+    <section class="exp-section">
+      <div class="exp-section-head reveal">
+        <span class="exp-section-num">04</span>
+        <div>
+          <h2 class="exp-section-title">Gallery</h2>
+          <p class="exp-section-sub">The project simulation.</p>
+        </div>
+      </div>
+      <div class="exp-gallery">
+        <figure class="exp-gallery-item" data-src="digital-clock.jpeg">
+          <img src="digital-clock.jpeg" alt="Digital Clock Circuit Simulation" loading="lazy" />
+          <figcaption class="exp-gallery-label">Circuit Simulation</figcaption>
+          <span class="exp-gallery-zoom"><i class="fas fa-expand"></i></span>
+        </figure>
+      </div>
+    </section>
 
-  </div>
+    <!-- 05 PROJECT VIDEO -->
+    <section class="exp-section">
+      <div class="exp-section-head reveal">
+        <span class="exp-section-num">05</span>
+        <div>
+          <h2 class="exp-section-title">Project Video</h2>
+          <p class="exp-section-sub">See the clock running.</p>
+        </div>
+      </div>
+      <div class="exp-card reveal">
+        <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;border:1px solid var(--dark-border);">
+          <iframe src="https://drive.google.com/file/d/1DNbLYx_ayaaEHYVFZDmZ1iWl7o4TyNm8/preview?hl=en" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;" allow="autoplay" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
 
-  </div>
+    <!-- 06 PROJECT REPORT -->
+    <section class="exp-section">
+      <div class="exp-section-head reveal">
+        <span class="exp-section-num">06</span>
+        <div>
+          <h2 class="exp-section-title">Project Report</h2>
+          <p class="exp-section-sub">The full project documentation.</p>
+        </div>
+      </div>
+      <div class="exp-card reveal" style="display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;">
+        <div class="exp-cert-name">
+          <span class="cert-ic"><i class="fas fa-file-pdf"></i></span>
+          <div>
+            <h3 style="font-size:0.98rem;font-weight:700;color:white;">Digital Clock Project Report (PDF)</h3>
+            <span style="font-size:0.76rem;color:var(--text-muted);">Circuit, code, and implementation details.</span>
+          </div>
+        </div>
+        <div class="exp-cert-actions">
+          <a class="btn btn-primary" href="Digital Clock Report.pdf" target="_blank" rel="noopener"><i class="fas fa-eye"></i> View</a>
+          <a class="btn btn-ghost" href="Digital Clock Report.pdf" download><i class="fas fa-download"></i> Download</a>
+        </div>
+      </div>
+    </section>
 
-  <div class="footer">
-    <p>&copy; 2026 Ahmed Mohamed Sobhy Mostafa</p>
-  </div>
+    <!-- 07 NAVIGATION (dynamic, injected by project-nav.js) -->
+    <div id="project-nav"></div>
 
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="exp-footer">
+    <p>&copy; 2026 Ahmed Mohamed Sobhy Mostafa <span class="footer-dot">|</span> Mechatronics &amp; Robotics Engineer</p>
+  </footer>
+
+  <script src="exp-main.js"></script>
   <script src="project-nav.js"></script>
-
 </body>
 </html>
